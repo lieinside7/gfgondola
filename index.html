@@ -1,0 +1,2023 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
+  <meta content="PT. Gondola Firdaus Pratama Jaya - Spesialis Gondola Profesional untuk Proyek Konstruksi" name="description"/>
+  <title>PT. Gondola Firdaus Pratama Jaya - Spesialis Gondola Profesional</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="assets/css/fontawesome.css" rel="stylesheet"/>
+  <link href="assets/css/gf.css" rel="stylesheet"/>
+  <link href="assets/css/owl.css" rel="stylesheet"/>
+  <link href="assets/css/animate.css" rel="stylesheet"/>
+  <link href="https://unpkg.com/swiper@7/swiper-bundle.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet"/>
+  <style>
+    /* === WARNA UTAMA DAN GRADASI === */
+:root {
+  --primary-color: #1e3c72;
+  --secondary-color: #2a5298;
+  --accent-color: #25d366;
+  --gradient-main: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  --gradient-light: linear-gradient(135deg, #71bdf0 0%, #1e3c72 100%);
+  --white: #fff;
+  --shadow: 0 4px 16px rgba(30,60,114,0.08);
+  --transition: all 0.3s cubic-bezier(.4,0,.2,1);
+}
+
+body {
+  background: var(--white);
+  color: #222;
+}
+
+/* === HEADER & FOOTER === */
+.unified-header, footer {
+  background: var(--gradient-main);
+  color: var(--white);
+}
+.unified-header .nav-link, .unified-header .btn-contact {
+  color: var(--white) !important;
+}
+footer {
+  border-top: 4px solid var(--secondary-color);
+}
+.footer-content img {
+  margin-bottom: 15px;
+  filter: drop-shadow(0 2px 8px rgba(30,60,114,0.15));
+}
+
+/* HEADER MODERNIZATION */
+.unified-header {
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  color: #fff;
+  box-shadow: 0 8px 32px rgba(30,60,114,0.13), 0 2px 8px #21e6c122;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  min-height: 72px;
+  font-family: 'Poppins', 'Inter', 'Segoe UI', Arial, sans-serif;
+}
+.unified-header .navbar {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  min-height: 72px;
+  background: transparent;
+  border-radius: 0 0 48px 48px;
+  box-shadow: none;
+}
+.unified-header .navbar-brand img {
+  height: 48px !important;
+  max-width: 160px;
+  margin-right: 24px;
+  filter: drop-shadow(0 2px 8px #21e6c144);
+  transition: filter .2s;
+}
+.unified-header .navbar-brand img:hover {
+  filter: drop-shadow(0 4px 16px #21e6c199);
+}
+.unified-header .navbar-nav {
+  gap: 24px;
+}
+.unified-header .nav-link {
+  font-size: 1.13rem;
+  font-weight: 700;
+  letter-spacing: 0.7px;
+  padding: 12px 28px !important;
+  border-radius: 18px;
+  transition: background .22s, color .22s, box-shadow .22s;
+  color: #fff !important;
+  background: transparent;
+  position: relative;
+}
+.unified-header .nav-link.active,
+.unified-header .nav-link:hover,
+.unified-header .nav-link:focus {
+  background: linear-gradient(90deg,#21e6c1 0%,#1e3c72 100%);
+  color: #fff !important;
+  box-shadow: 0 4px 18px #21e6c144;
+}
+.unified-header .btn-contact {
+  font-size: 1.13rem;
+  font-weight: 800;
+  border-radius: 22px;
+  padding: 13px 36px;
+  background: linear-gradient(90deg,#21e6c1 0%,#71bdf0 100%);
+  color: #fff !important;
+  box-shadow: 0 4px 18px #21e6c144;
+  border: none;
+  margin-left: 24px;
+  transition: background .22s, color .22s, box-shadow .22s;
+  letter-spacing: 0.7px;
+}
+.unified-header .btn-contact:hover,
+.unified-header .btn-contact:focus {
+  background: linear-gradient(90deg,#1e3c72 0%,#21e6c1 100%);
+  color: #fff !important;
+  box-shadow: 0 8px 32px #21e6c144;
+}
+.unified-header .dropdown-menu {
+  border-radius: 22px;
+  box-shadow: 0 12px 48px #21e6c122, 0 2px 8px #1e3c7211;
+  border: none;
+  background: linear-gradient(135deg, #f8fcff 0%, #eaf6fa 100%);
+  min-width: 220px;
+  padding: 0.7rem 0;
+  margin-top: 14px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(18px);
+  transition: opacity 0.28s cubic-bezier(.4,0,.2,1), transform 0.28s cubic-bezier(.4,0,.2,1);
+}
+.unified-header .dropdown:hover > .dropdown-menu,
+.unified-header .dropdown:focus-within > .dropdown-menu {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+.unified-header .dropdown-menu .dropdown-item {
+  color: #1e3c72;
+  background: transparent;
+  font-weight: 600;
+  padding: 14px 32px;
+  font-size: 1.09rem;
+  border-radius: 12px;
+  transition: background 0.18s, color 0.18s;
+  margin: 3px 10px;
+  letter-spacing: 0.2px;
+}
+.unified-header .dropdown-menu .dropdown-item:hover,
+.unified-header .dropdown-menu .dropdown-item:focus {
+  background: linear-gradient(90deg,#21e6c1 0%,#1e3c72 100%);
+  color: #fff;
+}
+@media (max-width: 991px) {
+  .unified-header .navbar-nav {
+    gap: 10px;
+  }
+  .unified-header .btn-contact {
+    margin-left: 0;
+    margin-top: 14px;
+    width: 100%;
+    display: block;
+    max-width: 220px;
+  }
+  .unified-header .nav-link {
+    padding: 10px 16px !important;
+    font-size: 1rem;
+  }
+  .unified-header .dropdown-menu {
+    min-width: 170px;
+    border-radius: 14px;
+    margin-top: 6px;
+    box-shadow: 0 6px 24px #21e6c122, 0 1px 4px #1e3c7211;
+  }
+  .unified-header .dropdown-menu .dropdown-item {
+    padding: 10px 18px;
+    font-size: 1rem;
+    border-radius: 8px;
+    margin: 2px 6px;
+  }
+}
+@media (max-width: 575px) {
+  .unified-header {
+    min-height: 44px;
+  }
+  .unified-header .navbar {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    min-height: 44px;
+  }
+  .unified-header .navbar-brand img {
+    height: 28px !important;
+    max-width: 70px !important;
+    margin-right: 4px !important;
+  }
+  .unified-header .btn-contact {
+    font-size: 0.95rem !important;
+    padding: 7px 10px !important;
+    min-width: 0 !important;
+    max-width: 120px !important;
+  }
+}
+
+/* === SECTION TITLE === */
+.section-title.center h2 {
+  color: var(--primary-color);
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+.section-title.center h6 {
+  color: var(--secondary-color);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+/* === KOTAK FOTO & PORTOFOLIO === */
+.card-img-top, .featured-items .thumb img, .popular-item .thumb img, .closed-item .thumb img, .pricing-item img {
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  padding: 12px;
+  background: var(--white);
+  transition: var(--transition);
+}
+.card-img-top:hover, .featured-items .thumb img:hover, .popular-item .thumb img:hover, .closed-item .thumb img:hover, .pricing-item img:hover {
+  transform: scale(1.04) translateY(-4px);
+  box-shadow: 0 8px 32px rgba(30,60,114,0.13);
+}
+.card, .popular-item, .closed-item, .pricing-item {
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  background: var(--white);
+}
+.card:hover, .popular-item:hover, .closed-item:hover, .pricing-item:hover {
+  box-shadow: 0 8px 32px rgba(30,60,114,0.13);
+  transform: translateY(-6px);
+}
+
+/* === SECTION SPACING === */
+.section-padding {
+  padding: 100px 0 80px 0;
+}
+@media (max-width: 991px) {
+  .section-padding { padding: 60px 0 40px 0; }
+}
+@media (max-width: 575px) {
+  .section-padding { padding: 32px 0 18px 0; }
+}
+.container, .container-fluid {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+@media (max-width: 575px) {
+  .container, .container-fluid {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+.row {
+  margin-left: -12px;
+  margin-right: -12px;
+}
+[class^="col-"], [class*=" col-"] {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+.section-title.center {
+  margin-bottom: 44px;
+}
+.section-title.center h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  font-weight: 900;
+  letter-spacing: 1.2px;
+}
+.section-title.center h6 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  color: #21e6c1;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+@media (max-width: 575px) {
+  .section-title.center h2 { font-size: 1.3rem; }
+  .section-title.center { margin-bottom: 22px; }
+}
+.layanan-area, .featured-items, .popular-categories, .closed-contests, .pricing-plans, .clients {
+  border-radius: 32px;
+  box-shadow: 0 8px 32px rgba(30,60,114,0.08);
+  background: #fff;
+  margin-bottom: 48px;
+  margin-top: 0;
+}
+@media (max-width: 991px) {
+  .layanan-area, .featured-items, .popular-categories, .closed-contests, .pricing-plans, .clients {
+    border-radius: 18px;
+    margin-bottom: 28px;
+  }
+}
+@media (max-width: 575px) {
+  .layanan-area, .featured-items, .popular-categories, .closed-contests, .pricing-plans, .clients {
+    border-radius: 8px;
+    margin-bottom: 14px;
+  }
+}
+.layanan-grid, .row.layanan-grid, .row {
+  gap: 32px 0;
+}
+@media (max-width: 991px) {
+  .layanan-grid, .row.layanan-grid, .row { gap: 18px 0; }
+}
+@media (max-width: 575px) {
+  .layanan-grid, .row.layanan-grid, .row { gap: 8px 0; }
+}
+.layanan-item, .popular-item, .pricing-item, .closed-item {
+  margin-bottom: 32px;
+  border-radius: 18px;
+  box-shadow: 0 2px 16px rgba(30,60,114,0.09);
+  padding: 38px 20px;
+  background: #fff;
+  transition: box-shadow .3s, transform .2s;
+}
+.layanan-item:hover, .popular-item:hover, .pricing-item:hover, .closed-item:hover {
+  box-shadow: 0 8px 32px #21e6c133;
+  transform: translateY(-4px) scale(1.03);
+}
+@media (max-width: 991px) {
+  .layanan-item, .popular-item, .pricing-item, .closed-item { padding: 22px 10px; margin-bottom: 18px; }
+}
+@media (max-width: 575px) {
+  .layanan-item, .popular-item, .pricing-item, .closed-item { padding: 12px 4px; margin-bottom: 8px; }
+}
+.pricing-item ul { margin-bottom: 18px; }
+.pricing-item ul li { margin-bottom: 7px; }
+.border-button, .main-button {
+  margin-top: 18px;
+  margin-bottom: 8px;
+}
+@media (max-width: 575px) {
+  .border-button, .main-button { margin-top: 8px; margin-bottom: 4px; }
+}
+.client-slider .client-item {
+  margin: 0 50px 24px 10px;
+  min-height: 120px;
+  border-radius: 16px;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: 0 2px 12px #21e6c111;
+  transition: box-shadow 0.22s, background 0.22s, transform 0.22s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.client-slider .client-item:hover, .client-slider .client-item:focus {
+  background: #eaf6fa; /* Slightly more blue on hover for pop effect */
+  box-shadow: 0 16px 48px #21e6c144, 0 4px 18px #1e3c7211;
+  transform: translateY(-10px) scale(1.06);
+  z-index: 2;
+  margin-top: -36px;
+}
+@media (max-width: 575px) {
+  .client-slider .client-item {
+    min-height: 60px !important;
+    height: 60px !important;
+    padding: 8px 0 !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  .client-slider .client-item img {
+    max-width: 90px !important;
+    max-height: 38px !important;
+    margin: 0 8px !important;
+  }
+}
+.client-slider .client-item img {
+  max-width: 180px !important;
+  max-height: 90px !important;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  aspect-ratio: unset;
+  background: transparent;
+  display: block;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  /* Center horizontally and vertically */
+  position: static;
+  /* Remove grayscale and brightness filter for original color */
+  filter: none;
+  opacity: 1;
+  transition: filter .2s, opacity .2s, transform .22s, box-shadow .22s;
+}
+.client-slider .client-item:hover img, .client-slider .client-item:focus img {
+  transform: scale(1.13) translateY(-10px);
+  box-shadow: 0 8px 32px #21e6c144, 0 2px 12px #1e3c7211;
+  z-index: 2;
+}
+.client-slider .owl-stage-outer,
+.client-slider .owl-stage {
+  overflow: visible !important;
+}
+.footer-modern {
+  margin-top: 64px;
+  padding-top: 48px;
+  padding-bottom: 24px;
+}
+@media (max-width: 991px) {
+  .footer-modern { margin-top: 32px; padding-top: 22px; padding-bottom: 10px; }
+}
+@media (max-width: 575px) {
+  .footer-modern { margin-top: 12px; padding-top: 8px; padding-bottom: 4px; }
+}
+.clients .client-slider {
+  padding-top: 96px; /* Increased from 48px to give more space above logos */
+  min-height: 220px; /* Ensures the box is tall enough for pop-out effect */
+  overflow: visible;
+}
+@media (max-width: 575px) {
+  .clients .client-slider {
+    padding-top: 56px; /* Also increase on mobile for consistency */
+    min-height: 140px;
+  }
+}
+.clients .section-title.center {
+  position: relative;
+  z-index: 1;
+}
+.client-slider .client-item:hover, .client-slider .client-item:focus {
+  z-index: 20;
+}
+/* Pop up Hubungi Kami */
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 20px;
+  z-index: 1000;
+  width: 300px;
+  text-align: center;
+}
+.popup h3 { margin-bottom: 20px; font-size: 1.2rem; color: #333; }
+.popup button {
+  display: block; width: 100%; margin: 10px 0; padding: 10px;
+  border: none; border-radius: 5px; font-size: 1rem; cursor: pointer; transition: background-color 0.3s;
+}
+.popup .phone-btn { background-color: #25d366; color: #fff; }
+.popup .phone-btn:hover { background-color: #1da851; }
+.popup .email-btn { background-color: #007bff; color: #fff; }
+.popup .email-btn:hover { background-color: #0056b3; }
+.popup .close-btn { background-color: #dc3545; color: #fff; }
+.popup .close-btn:hover { background-color: #b02a37; }
+.overlay {
+  display: none;
+  position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); z-index: 999;
+}
+#popup-email {
+  z-index: 2002;
+}
+#overlay-email {
+  z-index: 2001;
+}
+.client-title-premium {
+  font-size: 2.8rem;
+  font-weight: 900;
+  letter-spacing: 2.5px;
+  display: inline-block;
+  background: linear-gradient(90deg, #21e6c1 0%, #1e3c72 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  position: relative;
+  padding-bottom: 10px;
+  margin-bottom: 0;
+  /* Soft glow only, no text-shadow */
+  filter: none;
+  z-index: 1;
+}
+.client-title-premium::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 60%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 60%;
+  background: radial-gradient(ellipse at center, #21e6c155 0%, #1e3c7215 80%, transparent 100%);
+  filter: blur(10px);
+  opacity: 0.45;
+  z-index: -1;
+  pointer-events: none;
+}
+@media (max-width: 575px) {
+  .client-title-premium {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    padding-bottom: 5px;
+  }
+  .client-title-premium::before {
+    width: 100%;
+    height: 80%;
+    filter: blur(7px);
+  }
+}
+.client-underline-premium {
+  width: 120px;
+  height: 6px;
+  margin: 0 auto;
+  border-radius: 3px;
+  background: linear-gradient(90deg, #21e6c1 0%, #1e3c72 50%, #2a5298 100%);
+  box-shadow: 0 0 24px #21e6c1cc, 0 2px 8px #1e3c7244;
+  position: relative;
+  animation: underlineGlowPremium 2.2s infinite alternate;
+}
+@media (max-width: 575px) {
+  .client-underline-premium {
+    width: 60px;
+    height: 3px;
+  }
+}
+@keyframes underlineGlowPremium {
+  0% { box-shadow: 0 0 12px #21e6c1cc, 0 2px 8px #1e3c7244; }
+  100% { box-shadow: 0 0 32px #21e6c1cc, 0 4px 16px #1e3c7244; }
+}
+
+/* === PREMIUM DESIGN OVERRIDES === */
+body, .unified-header, .footer-modern, .footer-content, .popup, .popupContainer, .main-banner, .layanan-item, .popular-item, .pricing-item, .closed-item, .border-button a, .main-button a, .main-banner-btn, .dropdown-menu, .badge, .category, .price, .winner, .likes, .Sukses {
+  font-family: 'Poppins', 'Inter', 'Segoe UI', Arial, sans-serif !important;
+}
+
+/* HEADER & NAVIGATION PREMIUM */
+.unified-header, .unified-header .navbar, .unified-header .navbar-nav, .unified-header .dropdown-menu {
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%) !important;
+  border-radius: 0 0 48px 48px !important;
+  box-shadow: 0 8px 32px rgba(30,60,114,0.10) !important;
+}
+.unified-header .nav-link, .unified-header .btn-contact {
+  border-radius: 14px !important;
+  font-weight: 600;
+  transition: background .18s, color .18s, box-shadow .18s;
+}
+.unified-header .nav-link.active, .unified-header .nav-link:hover, .unified-header .nav-link:focus {
+  background: linear-gradient(90deg,#21e6c1 0%,#1e3c72 100%) !important;
+  color: #fff !important;
+  box-shadow: 0 4px 18px #21e6c144;
+}
+.unified-header .btn-contact {
+  background: linear-gradient(90deg,#21e6c1 0%,#71bdf0 100%) !important;
+  color: #fff !important;
+  border-radius: 16px !important;
+  font-weight: 700;
+  box-shadow: 0 2px 12px #21e6c133;
+  border: none;
+  transition: background .18s, color .18s, box-shadow .18s;
+}
+.unified-header .btn-contact:hover, .unified-header .btn-contact:focus {
+  background: linear-gradient(90deg,#1e3c72 0%,#21e6c1 100%) !important;
+  color: #fff !important;
+  box-shadow: 0 4px 18px #21e6c144;
+}
+
+/* DROPDOWN MENU PREMIUM */
+.unified-header .dropdown-menu {
+  border-radius: 18px !important;
+  box-shadow: 0 8px 32px #21e6c122, 0 2px 8px #1e3c7211 !important;
+  border: none !important;
+  background: linear-gradient(135deg, #f8fcff 0%, #eaf6fa 100%) !important;
+  min-width: 200px;
+  padding: 0.5rem 0;
+  margin-top: 8px;
+}
+.unified-header .dropdown-item {
+  font-weight: 600;
+  color: #1e3c72 !important;
+  border-radius: 10px !important;
+  padding: 10px 22px;
+  transition: background .18s, color .18s;
+}
+.unified-header .dropdown-item:hover, .unified-header .dropdown-item:focus {
+  background: linear-gradient(90deg,#21e6c1 0%,#1e3c72 100%) !important;
+  color: #fff !important;
+}
+
+/* FOOTER PREMIUM */
+.footer-modern, footer {
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%) !important;
+  border-radius: 48px 48px 0 0 !important;
+  box-shadow: 0 -4px 32px #1e3c7211 !important;
+}
+.footer-modern .footer-content img {
+  filter: drop-shadow(0 2px 8px #21e6c155) !important;
+}
+.footer-modern .footer-divider {
+  background: linear-gradient(90deg,#21e6c1 0%,#71bdf0 100%) !important;
+  border-radius: 2px !important;
+}
+.footer-modern .footer-contact span,
+.footer-modern .footer-contact a {
+  color: #eaf6fa !important;
+  font-weight: 600;
+  font-size: 1.13rem;
+  transition: color .2s;
+}
+.footer-modern .footer-contact a {
+  border-bottom: 2px solid #21e6c1 !important;
+  text-decoration: none !important;
+  transition: color .2s, border-color .2s;
+}
+.footer-modern .footer-contact a:hover {
+  color: #21e6c1 !important;
+  border-color: #fff !important;
+}
+.footer-modern .footer-contact i {
+  font-size: 1.18rem;
+  margin-right: 4px;
+  transition: color .2s, transform .2s;
+}
+.footer-modern .footer-contact a:hover i.fa-whatsapp,
+.footer-modern .footer-contact a:hover i.fa-envelope {
+  color: #21e6c1 !important;
+  transform: scale(1.15);
+}
+.footer-modern .copyright {
+  color: #eaf6fa !important;
+  opacity: 0.8;
+}
+.footer-modern .webmaker a {
+  color: #21e6c1 !important;
+  border-bottom: 1.5px dotted #21e6c1 !important;
+  font-weight: 700;
+  text-decoration: none !important;
+  transition: color .2s;
+}
+.footer-modern .webmaker a:hover {
+  color: #fff !important;
+  border-bottom: 1.5px solid #fff !important;
+}
+
+/* CARD & BADGE PREMIUM */
+.layanan-item, .popular-item, .pricing-item, .closed-item, .card {
+  border-radius: 22px !important;
+  box-shadow: 0 4px 24px #21e6c122, 0 1.5px 8px #1e3c7211 !important;
+  background: #fff !important;
+  transition: box-shadow .22s, transform .18s;
+  position: relative;
+  overflow: hidden;
+}
+.layanan-item:hover, .popular-item:hover, .pricing-item:hover, .closed-item:hover, .card:hover {
+  box-shadow: 0 12px 48px #21e6c144, 0 4px 18px #1e3c7211 !important;
+  transform: translateY(-8px) scale(1.04);
+  z-index: 2;
+}
+.layanan-icon, .icon img {
+  background: linear-gradient(135deg, #eaf6fa 0%, #21e6c1 100%) !important;
+  border-radius: 50% !important;
+  box-shadow: 0 2px 12px #21e6c133 !important;
+  padding: 10px;
+  transition: background .2s, color .2s;
+}
+.layanan-item:hover .layanan-icon, .popular-item:hover .icon img {
+  background: linear-gradient(135deg, #21e6c1 0%, #1e3c72 100%) !important;
+  color: #fff !important;
+}
+.badge, .category, .price, .winner, .likes, .Sukses {
+  border-radius: 10px !important;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 7px 18px;
+  background: linear-gradient(90deg,#21e6c1 0%,#1e3c72 100%) !important;
+  color: #fff !important;
+  box-shadow: 0 2px 8px #21e6c133 !important;
+  letter-spacing: 1px;
+  display: inline-block;
+  margin-bottom: 6px;
+}
+
+/* BUTTONS PREMIUM */
+.btn-contact, .main-button a, .main-banner-btn, .border-button a, .border-button .btn, .popup button, .popup .phone-btn, .popup .email-btn, .popup .close-btn {
+  background: linear-gradient(90deg,#21e6c1 0%,#71bdf0 100%) !important;
+  color: #fff !important;
+  border-radius: 16px !important;
+  font-weight: 700;
+  box-shadow: 0 2px 12px #21e6c133 !important;
+  border: none !important;
+  transition: background .18s, color .18s, box-shadow .18s;
+  padding: 12px 32px !important;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none !important;
+}
+.btn-contact:hover, .main-button a:hover, .main-banner-btn:hover, .border-button a:hover, .border-button .btn:hover, .popup button:hover, .popup .phone-btn:hover, .popup .email-btn:hover, .popup .close-btn:hover {
+  background: linear-gradient(90deg,#1e3c72 0%,#21e6c1 100%) !important;
+  color: #fff !important;
+  box-shadow: 0 4px 18px #21e6c144 !important;
+  text-decoration: none !important;
+}
+
+/* POPUP/MODAL PREMIUM */
+.popup, .popupContainer {
+  border-radius: 22px !important;
+  box-shadow: 0 8px 32px #21e6c144, 0 2px 8px #1e3c7211 !important;
+  background: linear-gradient(135deg, #f8fcff 0%, #eaf6fa 100%) !important;
+  border: none !important;
+  color: #1e3c72 !important;
+}
+.popup h3, .popupHeader {
+  font-weight: 800 !important;
+  color: #1e3c72 !important;
+  letter-spacing: 1px;
+}
+.popup button, .popup .phone-btn, .popup .email-btn, .popup .close-btn {
+  border-radius: 12px !important;
+  font-weight: 700 !important;
+  margin: 8px 0 !important;
+  box-shadow: 0 2px 8px #21e6c133 !important;
+  border: none !important;
+}
+.popup .phone-btn {
+  background: linear-gradient(90deg,#25d366 0%,#1e3c72 100%) !important;
+}
+.popup .email-btn {
+  background: linear-gradient(90deg,#71bdf0 0%,#1e3c72 100%) !important;
+}
+.popup .close-btn {
+  background: linear-gradient(90deg,#dc3545 0%,#b02a37 100%) !important;
+}
+
+/* SECTION & CONTAINER PREMIUM */
+.section, .section-padding, .layanan-area, .featured-items, .pricing-plans, .clients, .popular-categories, .closed-contests {
+  background: linear-gradient(135deg, #f8fcff 0%, #eaf6fa 100%) !important;
+  border-radius: 48px !important;
+  box-shadow: 0 8px 32px rgba(30,60,114,0.08) !important;
+}
+
+/* SECTION TITLE PREMIUM */
+.section-title, .client-title-premium, .section-title.center h2, .section-title h2 {
+  color: #1e3c72 !important;
+  font-weight: 900 !important;
+  letter-spacing: 1.2px !important;
+  background: linear-gradient(90deg, #21e6c1 0%, #1e3c72 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  text-fill-color: transparent !important;
+  margin-bottom: 10px !important;
+  filter: none !important;
+  z-index: 1;
+}
+
+/* CLIENT UNDERLINE PREMIUM */
+.client-underline-premium {
+  width: 120px;
+  height: 6px;
+  margin: 0 auto;
+  border-radius: 3px;
+  background: linear-gradient(90deg, #21e6c1 0%, #1e3c72 50%, #2a5298 100%) !important;
+  box-shadow: 0 0 24px #21e6c1cc, 0 2px 8px #1e3c7244 !important;
+  position: relative;
+  animation: underlineGlowPremium 2.2s infinite alternate;
+}
+@keyframes underlineGlowPremium {
+  0% { box-shadow: 0 0 12px #21e6c1cc, 0 2px 8px #1e3c7244; }
+  100% { box-shadow: 0 0 32px #21e6c1cc, 0 4px 16px #1e3c7244; }
+}
+
+/* RESPONSIVE PREMIUM */
+@media (max-width: 991px) {
+  .unified-header, .footer-modern, .layanan-area, .featured-items, .pricing-plans, .clients, .popular-categories, .closed-contests {
+    border-radius: 18px !important;
+  }
+  .layanan-item, .popular-item, .pricing-item, .closed-item, .card, .popup, .popupContainer {
+    border-radius: 12px !important;
+  }
+}
+@media (max-width: 575px) {
+  .unified-header, .footer-modern, .layanan-area, .featured-items, .pricing-plans, .clients, .popular-categories, .closed-contests {
+    border-radius: 8px !important;
+  }
+  .layanan-item, .popular-item, .pricing-item, .closed-item, .card, .popup, .popupContainer {
+    border-radius: 7px !important;
+  }
+  .client-underline-premium {
+    width: 60px;
+    height: 3px;
+  }
+  .section-title, .client-title-premium, .section-title.center h2, .section-title h2 {
+    font-size: 1.3rem !important;
+    letter-spacing: 1px !important;
+  }
+}
+
+/* Section Title Corporate Style */
+.layanan-area .section-title {
+  margin-bottom: 36px !important;
+  padding-bottom: 18px;
+  border-bottom: 3px solid #21e6c1;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.layanan-area .section-title h2 {
+  font-size: 2.6rem !important;
+  font-weight: 900 !important;
+  letter-spacing: 1.5px !important;
+  color: #1e3c72 !important;
+  margin-bottom: 8px !important;
+  text-transform: uppercase;
+}
+.layanan-area .section-title p,
+.layanan-area .section-desc {
+  font-size: 1.18rem !important;
+  font-weight: 600 !important;
+  color: #2a5298 !important;
+  margin-bottom: 0 !important;
+}
+
+/* Layanan Icon Corporate */
+.layanan-icon {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 78px;
+  height: 78px;
+  aspect-ratio: 1/1;
+  background: linear-gradient(135deg, #21e6c1 0%, #1e3c72 100%) !important;
+  border-radius: 50% !important;
+  box-shadow: 0 6px 24px #1e3c7240, 0 2px 8px #21e6c133 !important;
+  font-size: 2.8rem;
+  color: #fff !important;
+  border: 4px solid #fff;
+  margin: 0 auto 22px auto;
+  transition: box-shadow .22s, background .22s, color .22s, border .22s;
+}
+.layanan-item:hover .layanan-icon {
+  background: linear-gradient(135deg, #fff 0%, #21e6c1 100%) !important;
+  color: #1e3c72 !important;
+  border-color: #21e6c1;
+  box-shadow: 0 12px 36px #21e6c144, 0 4px 18px #1e3c7211 !important;
+}
+
+/* Layanan Card Corporate */
+.layanan-item {
+  border-radius: 22px !important;
+  box-shadow: 0 6px 32px #1e3c7211, 0 2px 8px #21e6c122 !important;
+  background: #fff !important;
+  padding: 44px 22px 32px 22px !important;
+  margin-bottom: 32px;
+  transition: box-shadow .22s, transform .18s, border .18s;
+  border: 2.5px solid #eaf6fa;
+  min-height: 340px;
+  position: relative;
+}
+.layanan-item:hover {
+  box-shadow: 0 16px 48px #21e6c144, 0 4px 18px #1e3c7211 !important;
+  border: 2.5px solid #21e6c1;
+  transform: translateY(-8px) scale(1.04);
+  z-index: 2;
+}
+
+/* Layanan Title & Desc */
+.layanan-item h5 {
+  font-size: 1.25rem !important;
+  font-weight: 900 !important;
+  color: #1e3c72 !important;
+  margin-bottom: 12px !important;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+}
+.layanan-item p {
+  font-size: 1.08rem !important;
+  font-weight: 600 !important;
+  color: #2a5298 !important;
+  margin-bottom: 0 !important;
+}
+
+/* Responsive Corporate Layanan */
+@media (max-width: 991px) {
+  .layanan-area .section-title h2 { font-size: 1.7rem !important; }
+  .layanan-item { padding: 28px 10px 18px 10px !important; min-height: 260px; }
+  .layanan-icon { width: 56px; height: 56px; font-size: 1.7rem; }
+}
+@media (max-width: 575px) {
+  .layanan-area .section-title { padding-bottom: 10px; }
+  .layanan-area .section-title h2 { font-size: 1.1rem !important; }
+  .layanan-item { padding: 16px 4px 12px 4px !important; min-height: 180px; }
+  .layanan-icon { width: 38px; height: 38px; font-size: 1.1rem; margin-bottom: 8px; }
+}
+
+/* ======= GF POPULAR CATEGORIES ENHANCED ======= */
+.popular-categories {
+  background: linear-gradient(135deg, #f8fcff 0%, #eaf6fa 100%) !important;
+  border-radius: 40px !important;
+  box-shadow: 0 8px 32px rgba(30,60,114,0.10) !important;
+  padding-top: 48px !important;
+  padding-bottom: 32px !important;
+}
+.popular-categories .section-title {
+  margin-bottom: 28px !important;
+  padding-bottom: 10px;
+  border-bottom: 2.5px solid #21e6c1;
+  max-width: 480px;
+  margin-left: 0;
+}
+.popular-categories .section-title h2 {
+  font-size: 2.1rem !important;
+  font-weight: 900 !important;
+  letter-spacing: 1.2px !important;
+  color: #1e3c72 !important;
+  margin-bottom: 6px !important;
+  text-transform: uppercase;
+}
+.popular-categories .section-title h6 {
+  font-size: 1.08rem !important;
+  color: #21e6c1 !important;
+  font-weight: 700 !important;
+  letter-spacing: 2px !important;
+  margin-bottom: 4px !important;
+}
+.popular-categories .main-button {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+.popular-categories .main-button a {
+  background: linear-gradient(90deg,#21e6c1 0%,#1e3c72 100%) !important;
+  color: #fff !important;
+  border-radius: 14px !important;
+  font-weight: 700;
+  font-size: 1.08rem;
+  padding: 12px 32px !important;
+  box-shadow: 0 2px 12px #21e6c133 !important;
+  border: none !important;
+  transition: background .18s, color .18s, box-shadow .18s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.popular-categories .main-button a:hover {
+  background: linear-gradient(90deg,#1e3c72 0%,#21e6c1 100%) !important;
+  color: #fff !important;
+  box-shadow: 0 4px 18px #21e6c144 !important;
+}
+.popular-item {
+  border-radius: 18px !important;
+  box-shadow: 0 4px 24px #21e6c122, 0 1.5px 8px #1e3c7211 !important;
+  background: #fff !important;
+  padding: 32px 18px 24px 18px !important;
+  margin-bottom: 22px;
+  transition: box-shadow .22s, transform .18s;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #eaf6fa;
+}
+.popular-item:hover {
+  box-shadow: 0 12px 48px #21e6c144, 0 4px 18px #1e3c7211 !important;
+  border: 2px solid #21e6c1;
+  transform: translateY(-8px) scale(1.04);
+  z-index: 2;
+}
+.popular-item .top-content {
+  display: flex;
+  align-items: center;
+  margin-bottom: 18px;
+  gap: 12px;
+}
+.popular-item .icon img {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #eaf6fa 0%, #21e6c1 100%);
+  box-shadow: 0 2px 12px #21e6c133;
+  padding: 8px;
+  margin-bottom: 0;
+  border: 2px solid #fff;
+  transition: background .18s, box-shadow .18s;
+}
+.popular-item:hover .icon img {
+  background: linear-gradient(135deg, #21e6c1 0%, #1e3c72 100%);
+  box-shadow: 0 4px 18px #21e6c144;
+}
+.popular-item .right h4 {
+  font-size: 1.13rem;
+  font-weight: 900;
+  color: #1e3c72;
+  margin-bottom: 2px;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+}
+.popular-item .right span {
+  font-size: 0.98rem;
+  color: #2a5298;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+.popular-item .thumb {
+  margin-bottom: 12px;
+  position: relative;
+}
+.popular-item .thumb img {
+  border-radius: 12px;
+  box-shadow: 0 2px 8px #21e6c133;
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 8px;
+  transition: transform .18s;
+}
+.popular-item .thumb img:hover {
+  transform: scale(1.04) translateY(-4px);
+}
+.popular-item .category {
+  display: block;
+  background: linear-gradient(90deg,#21e6c1 0%,#1e3c72 100%);
+  color: #fff;
+  font-size: 0.98rem;
+  font-weight: 700;
+  border-radius: 8px;
+  padding: 6px 16px;
+  margin-bottom: 4px;
+  letter-spacing: 0.7px;
+  box-shadow: 0 2px 8px #21e6c133;
+  text-align: left;
+}
+.popular-item .likes {
+  display: inline-block;
+  background: #25d366;
+  color: #fff;
+  font-size: 0.98rem;
+  font-weight: 700;
+  border-radius: 8px;
+  padding: 6px 16px;
+  margin-left: 6px;
+  margin-bottom: 4px;
+  letter-spacing: 0.7px;
+  box-shadow: 0 2px 8px #25d36633;
+}
+.popular-item .likes i {
+  margin-right: 4px;
+  color: #fff;
+}
+.popular-item .Sukses {
+  display: inline-block;
+  background: #71bdf0;
+  color: #fff;
+  font-size: 0.98rem;
+  font-weight: 700;
+  border-radius: 8px;
+  padding: 6px 16px;
+  margin-left: 6px;
+  margin-bottom: 4px;
+  letter-spacing: 0.7px;
+  box-shadow: 0 2px 8px #71bdf033;
+}
+.popular-item .border-button {
+  margin-top: 12px;
+}
+.popular-item .border-button a {
+  background: linear-gradient(90deg,#21e6c1 0%,#1e3c72 100%) !important;
+  color: #fff !important;
+  border-radius: 10px !important;
+  font-weight: 700;
+  font-size: 1.01rem;
+  padding: 10px 24px !important;
+  box-shadow: 0 2px 8px #21e6c133 !important;
+  border: none !important;
+  transition: background .18s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.popular-item .border-button a:hover {
+  background: linear-gradient(90deg,#1e3c72 0%,#21e6c1 100%) !important;
+}
+@media (max-width: 991px) {
+  .popular-categories {
+    border-radius: 18px !important;
+    padding-top: 24px !important;
+    padding-bottom: 12px !important;
+  }
+  .popular-item {
+    padding: 18px 6px 10px 6px !important;
+  }
+  .popular-item .icon img {
+    width: 38px;
+    height: 38px;
+    padding: 4px;
+  }
+}
+@media (max-width: 575px) {
+  .popular-categories {
+    border-radius: 8px !important;
+    padding-top: 10px !important;
+    padding-bottom: 4px !important;
+  }
+  .popular-categories .section-title h2 {
+    font-size: 1.1rem !important;
+  }
+  .popular-item {
+    padding: 10px 2px 6px 2px !important;
+    border-radius: 7px !important;
+  }
+  .popular-item .icon img {
+    width: 28px;
+    height: 28px;
+    padding: 2px;
+  }
+  .popular-item .right h4 {
+    font-size: 0.98rem;
+  }
+  .popular-item .category,
+  .popular-item .likes,
+  .popular-item .Sukses {
+    font-size: 0.92rem;
+    padding: 4px 8px;
+    border-radius: 5px;
+  }
+  .popular-item .border-button a {
+    font-size: 0.95rem;
+    padding: 7px 10px !important;
+    border-radius: 7px !important;
+  }
+}
+/* Highlight dan animasi underline untuk Paket Layanan */
+.pricing-title-premium {
+  text-align: center;
+}
+.pricing-title-gradient {
+  background: linear-gradient(90deg, #21e6c1 0%, #1e3c72 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+.pricing-underline-premium {
+  width: 120px;
+  height: 6px;
+  margin: 0 auto 18px auto;
+  border-radius: 3px;
+  background: linear-gradient(90deg, #21e6c1 0%, #1e3c72 50%, #2a5298 100%);
+  box-shadow: 0 0 24px #21e6c1cc, 0 2px 8px #1e3c7244;
+  position: relative;
+  animation: underlineGlowPremium 2.2s infinite alternate;
+}
+.pricing-desc-premium {
+  color: #2a5298;
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 0;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 575px) {
+  .pricing-title-gradient { font-size: 1.3rem !important; }
+  .pricing-underline-premium { width: 60px; height: 3px; }
+  .pricing-desc-premium { font-size: 0.98rem; }
+}
+@keyframes underlineGlowPremium {
+  0% { box-shadow: 0 0 12px #21e6c1cc, 0 2px 8px #1e3c7244; }
+  100% { box-shadow: 0 0 32px #21e6c1cc, 0 4px 16px #1e3c7244; }
+}
+  </style>
+</head>
+<body>
+<!-- ***** Unified Header Start ***** -->
+<header class="unified-header">
+<div class="container">
+<nav class="navbar navbar-expand-lg navbar-dark">
+<a class="navbar-brand" href="index.html">
+  <img alt="PT. Gondola Firdaus Pratama Jaya" src="assets/images/Logo.png" style="height:36px; max-width:120px; width:auto; object-fit:contain;"/>
+</a>
+<button class="navbar-toggler" data-target="#navbarNav" data-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarNav">
+<ul class="navbar-nav mx-auto">
+<li class="nav-item active">
+<a class="nav-link" href="index.html">Home</a>
+</li>
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="layananDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Layanan
+  </a>
+  <div class="dropdown-menu" aria-labelledby="layananDropdown">
+    <a class="dropdown-item" href="fabrikasi.html">Fabrikasi</a>
+    <a class="dropdown-item" href="sparepart.html">Sparepart</a>
+    <a class="dropdown-item" href="modifikasi.html">Modifikasi</a>
+    <a class="dropdown-item" href="maintenance.html">Maintenance&Service</a>
+  </div>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="produk.html">Produk</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="tentang-kami.html">Tentang Kami</a>
+</li>
+</ul>
+<a class="btn btn-contact" href="javascript:void(0)" id="contactBtnPopup">
+  <i class="fa fa-phone"></i> Hubungi Kami
+</a>
+</div>
+</nav>
+</div>
+</header>
+<!-- ***** Unified Header End ***** -->
+<div style="height: 25px; background: #fff;"></div>
+<!-- ...existing code... -->
+<div class="popupContainer" id="modal" style="display:none;">
+<div class="popupHeader">
+<span class="header_title">Hubungi Kami</span>
+<span class="modal_close"><i class="fa fa-times"></i></span>
+</div>
+<section class="popupBody">
+<div>
+<p>Silakan hubungi kami untuk konsultasi, pemesanan, atau informasi lebih lanjut:</p>
+<a class="wa-btn" href="https://wa.me/6281220200690" target="_blank"><i class="fab fa-whatsapp"></i> 0812 2020 0690</a>
+<br/><br/>
+<a href="mailto:gfgondola86@gmail.com"><i class="fa fa-envelope"></i> gfgondola86@gmail.com</a>
+<br/><br/>
+<p><i class="fa fa-map-marker-alt"></i> Alamat: Jl. Raya Pondok Petir No.118 RT 002/019 Bojongsari - Depok</p>
+</div>
+</section>
+</div>
+<div class="overlay" id="overlay-hubungi" onclick="closePopupHubungi()"></div>
+<div class="popup" id="popup-hubungi">
+  <h3>Pilih Metode Kontak</h3>
+  <button type="button" class="phone-btn" onclick="callPhone()">
+    Hubungi via Telepon<br>
+    <span style="font-size:1.1em;font-weight:600;">081220200690</span>
+  </button>
+  <button type="button" class="email-btn" onclick="openEmailPopup()">
+    Hubungi via Email<br>
+    <span style="font-size:1.1em;font-weight:600;">gfgondola86@gmail.com</span>
+  </button>
+  <button type="button" class="close-btn" onclick="closePopupHubungi()">Tutup</button>
+</div>
+<div class="overlay" id="overlay-email" onclick="closeEmailPopup()" style="display:none;"></div>
+<div class="popup" id="popup-email" style="display:none;">
+  <h3>Pilih Aplikasi Email</h3>
+  <button type="button" onclick="window.open('mailto:gfgondola86@gmail.com','_self');closeEmailPopup();">Default Email</button>
+  <button type="button" onclick="window.open('https://mail.google.com/mail/?view=cm&fs=1&to=gfgondola86@gmail.com','_blank');closeEmailPopup();">Gmail Web</button>
+  <button type="button" onclick="window.open('https://compose.mail.yahoo.com/?to=gfgondola86@gmail.com','_blank');closeEmailPopup();">Yahoo Mail</button>
+  <button type="button" onclick="window.open('https://outlook.live.com/mail/0/deeplink/compose?to=gfgondola86@gmail.com','_blank');closeEmailPopup();">Outlook Web</button>
+  <button type="button" class="close-btn" onclick="closeEmailPopup()">Batal</button>
+</div>
+<!-- ***** Main Banner Area Start ***** -->
+<div class="main-banner" style="
+  background-image: url('assets/images/banner-bg.jpg');
+  width: 100vw;
+  min-height: 520px;
+  height: 60vh;
+  max-height: 900px;
+  margin: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 32px rgba(30,60,114,0.10);
+  overflow: hidden;
+  border-top-left-radius: 1px;
+  border-top-right-radius: 1px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+">
+  <!-- Dark overlay for better text visibility -->
+  <div style="
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, rgba(30,60,114,0.82) 0%, rgba(33,230,193,0.18) 100%);
+    z-index: 1;
+  "></div>
+  <div class="container" style="position: relative; z-index: 2; height: 100%; display: flex; align-items: center; justify-content: center;">
+    <div class="row w-100">
+      <div class="col-lg-10 offset-lg-1 d-flex align-items-center justify-content-center" style="height: 100%;">
+        <div class="header-text w-100 text-center" style="padding: 0 0.5rem;">
+          <h1 style="color: #f8fcff; font-size:3.2rem; font-weight:900; text-shadow: 1px 1px 16px rgba(30,60,114,0.38); margin-bottom:22px; letter-spacing:1.2px;">
+            <span style="color:#21e6c1;">PT. Gondola Firdaus Pratama Jaya</span><br>
+            <span style="color:#fff; font-size:2.1rem; font-weight:700;">Spesialis <span style="color:#71bdf0;">Gondola</span> Profesional</span>
+          </h1>
+          <p style="color: #eaf6fa; font-size:1.18rem; font-weight:500; margin-bottom:32px; text-shadow: 1px 1px 8px rgba(30,60,114,0.25); max-width: 540px; margin-left:auto; margin-right:auto;">
+            Solusi gondola custom, pemasangan, perawatan, dan sparepart untuk gedung tinggi. Aman, profesional, dan bergaransi.
+          </p>
+          <div class="buttons d-flex justify-content-center flex-wrap gap-3" style="margin-top:10px; gap:14px; flex-wrap:wrap;">
+            <a href="#layanan" class="main-banner-btn" style="font-size:1.13rem; font-weight:700; border-radius:12px; border:2px solid #21e6c1; background:rgba(33,230,193,0.13); color:#fff; padding:14px 38px; transition:all .2s; min-width:200px; max-width:320px; width:100%; text-align:center; box-shadow:0 2px 12px #21e6c133; display:inline-block; margin:0;">
+              Lihat Layanan Kami
+            </a>
+            <a href="https://wa.me/6281220200690" target="_blank" class="main-banner-btn" style="font-size:1.13rem; font-weight:700; border-radius:12px; border:2px solid #25d366; background:rgba(37,211,102,0.13); color:#fff; padding:14px 38px; transition:all .2s; min-width:200px; max-width:320px; width:100%; text-align:center; box-shadow:0 2px 12px #25d36633; display:inline-block; margin:0;">
+              <i class="fab fa-whatsapp"></i> Konsultasi via WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ***** Main Banner Area End ***** -->
+<!-- TRANSISI BANNER KE LAYANAN -->
+<div style="height: 48px; margin-top: -48px; background: linear-gradient(180deg, rgba(248,252,255,0.01) 0%, #f8fcff 100%); border-bottom-left-radius: 48px; border-bottom-right-radius: 48px;"></div>
+<!-- ***** Layanan Kami Area Start ***** -->
+<section class="section layanan-area" id="layanan" style="background:linear-gradient(135deg, #f8fcff 0%, #eaf6fa 100%); padding: 80px 0 60px 0; margin-top: -32px; border-radius: 32px; box-shadow: 0 8px 32px rgba(30,60,114,0.08);">
+  <div class="container">
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-8 text-center">
+        <h2 class="section-title" style="color:#1e3c72; font-weight:900; letter-spacing:1.2px; font-size:2.3rem;">Layanan Kami - Solusi Terintegrasi</h2>
+        <p class="section-desc" style="color:#2a5298; font-size:1.18rem; font-weight:500;"></p>
+      </div>
+    </div>
+<div class="col-lg-6">
+<div class="">
+<a href="kosong.html"></a>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-3 col-md-6">
+<div class="popular-item">
+<div class="top-content">
+<div class="icon">
+<img alt="Fabrikasi Gondola" src="assets/images/icon-01.png"/>
+</div>
+<div class="right">
+<h4>Fabrikasi Gondola</h4>
+<span><em>100+</em> Proyek Sukses</span>
+</div>
+</div>
+<div class="thumb">
+<img alt="Fabrikasi Gondola" src="assets/fotofabrikasi/fabrikasiunisba.jpg"/>
+<span class="category">Desain Kustom &amp; Presisi</span>
+</div>
+<div class="border-button">
+<a href="contest-details.html">Detail Layanan</a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-6">
+<div class="popular-item">
+<div class="top-content">
+<div class="icon">
+<img alt="Modifikasi Gondola" src="assets/images/icon-02.png"/>
+</div>
+<div class="right">
+<h4>Modifikasi Gondola</h4>
+<span><em>200+</em> Unit Termodifikasi</span>
+</div>
+</div>
+<div class="thumb">
+<img alt="Modifikasi Gondola" src="assets/fotomodifikasi/modifikasi.jpg"/>
+<span class="category">Upgrade Sistem &amp; Kapasitas</span>
+</div>
+<div class="border-button">
+<a href="contest-details.html">Detail Layanan</a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-6">
+<div class="popular-item">
+<div class="top-content">
+<div class="icon">
+<img alt="Maintenance &amp; Service" src="assets/images/icon-03.png"/>
+</div>
+<div class="right">
+<h4>Maintenance &amp; Service</h4>
+<span><em>Perawatan Berkala</em></span>
+</div>
+</div>
+<div class="thumb">
+<img alt="Maintenance &amp; Service" src="assets/fotomaintenance/keranjangJajang.jpg"/>
+<span class="category">Inspeksi &amp; Perbaikan</span>
+</div>
+<div class="border-button">
+<a href="contest-details.html">Detail Layanan</a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-6">
+<div class="popular-item">
+<div class="top-content">
+<div class="icon">
+<img alt="Sparepart Gondola" src="assets/images/icon-04.png"/>
+</div>
+<div class="right">
+<h4>Sparepart Gondola</h4>
+<span><em>Original &amp; OEM</em></span>
+</div>
+</div>
+<div class="thumb">
+<img alt="Sparepart Gondola" src="assets/fotosparepart/sparepart.jpg"/>
+<span class="category">Ketersediaan Cepat</span>
+</div>
+<div class="border-button">
+<a href="contest-details.html">Detail Layanan</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- TRANSISI LAYANAN KE PORTOFOLIO -->
+<div style="height: 36px; margin-top: -36px; background: linear-gradient(180deg, #eaf6fa 0%, #fff 100%);"></div>
+<section class="featured-items section-padding" id="featured-items-combined">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="section-title left" style="margin-bottom:44px;">
+          <div style="display:flex; align-items:left; justify-content:centerleft; gap:18px;">
+            <span style="display:inline-block; width:8px; height:38px; background:linear-gradient(135deg,#21e6c1 0%,#1e3c72 100%); border-radius:5px;"></span>
+            <div>
+              <h6 style="color:#21e6c1; font-size:1.15rem; font-weight:800; letter-spacing:2px; margin-bottom:2px; text-transform:uppercase;">Proyek Terbaru</h6>
+              <h2 style="font-size:2.5rem; font-weight:900; color:#1e3c72; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:0;">
+                Portofolio <span style="color:#21e6c1;">Kami</span>
+              </h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-12 mb-4">
+        <!-- Carousel Baris Atas -->
+        <div class="owl-features owl-carousel owl-carousel-atas">
+          <div class="item">
+            <div class="thumb">
+              <img alt="Fabrikasi Gondola Baru" src="assets/images/featured-01.jpg"/>
+              <div class="hover-effect">
+                <div class="content">
+                  <h4>Fabrikasi Gondola Baru <i class="fa fa-check-circle"></i></h4>
+                  <ul>
+                    <li><span>Klien:</span> PT. Bringin Karya Sejahtera</li>
+                    <li><span>Lokasi:</span> Jaya Pura Papua</li>
+                    <li><span>Layanan:</span> Perancangan dan pembuatan sistem gondola baru dengan spesifikasi khusus untuk gedung tinggi.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="thumb">
+              <img alt="Modifikasi Gondola Eksisting" src="assets/images/featured-02.jpg"/>
+              <div class="hover-effect">
+                <div class="content">
+                  <h4>Modifikasi Gondola Eksisting <i class="fa fa-check-circle"></i></h4>
+                  <ul>
+                    <li><span>Klien:</span> Apartemen Mewah</li>
+                    <li><span>Lokasi:</span> Surabaya</li>
+                    <li><span>Layanan:</span> Penyesuaian kapasitas dan peningkatan sistem keamanan pada gondola existing.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="thumb">
+              <img alt="Maintenance &amp; Service" src="assets/images/featured-03.jpg"/>
+              <div class="hover-effect">
+                <div class="content">
+                  <h4>Maintenance &amp; Service <i class="fa fa-check-circle"></i></h4>
+                  <ul>
+                    <li><span>Klien:</span> Gedung Perkantoran</li>
+                    <li><span>Lokasi:</span> Bandung</li>
+                    <li><span>Layanan:</span> Pemeliharaan berkala dan perbaikan menyeluruh sistem gondola.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-12">
+</section>
+<script>
+$(document).ready(function(){
+  $('.owl-carousel-atas').owlCarousel({
+    loop:true,
+    margin:30,
+    nav:false,
+    autoplay:true,
+    autoplayTimeout:2500,
+    smartSpeed:700,
+    responsive:{
+      0:{ items:1 },
+      600:{ items:2 },
+      1000:{ items:3 }
+    }
+  });
+  $('.owl-carousel-bawah').owlCarousel({
+    loop:true,
+    margin:30,
+    nav:false,
+    autoplay:true,
+    autoplayTimeout:3200,
+    smartSpeed:700,
+    responsive:{
+      0:{ items:1 },
+      600:{ items:2 },
+      1000:{ items:3 }
+    }
+  });
+});
+</script>
+</section>
+<section class="closed-contests section-padding">
+<div class="container">
+<div class="row">
+<div class="col-lg-12">
+  <div class="section-title left" style="margin-bottom:44px;">
+    <div style="display:flex; align-items:left; justify-content:left; gap:18px;">
+      <span style="display:inline-block; width:8px; height:38px; background:linear-gradient(135deg,#21e6c1 0%,#1e3c72 100%); border-radius:5px;"></span>
+      <div>
+        <h6 style="color:#21e6c1; font-size:1.15rem; font-weight:800; letter-spacing:2px; margin-bottom:2px; text-transform:uppercase;">
+          Portofolio Proyek
+        </h6>
+        <h2 style="font-size:2.5rem; font-weight:900; color:#1e3c72; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:0;">
+          Proyek <span style="color:#21e6c1;">Terkini</span> Kami
+        </h2>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="col-lg-12">
+<div class="owl-features owl-carousel">
+<div class="item">
+<div class="closed-item">
+<div class="thumb">
+<img alt="Gedung 30 Lantai Jakarta" src="assets/fotofabrikasi/gondolapapua.jpg"/>
+<span class="winner"><em>Klien:</em> PT. Bangun Jaya</span>
+<span class="price"><em>Layanan:</em> Fabrikasi Gondola Baru</span>
+</div>
+<div class="down-content">
+<div class="row">
+<div class="col-7">
+<h4>Gedung 30 Lantai <br/><span>Jakarta</span></h4>
+</div>
+<div class="col-5">
+<h4 class="pics">Selesai <br/><span>2024</span></h4>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="item">
+<div class="closed-item">
+<div class="thumb">
+<img alt="Gedung 20 Lantai Surabaya" src="assets/fotofabrikasi/gondolapapua.jpg"/>
+<span class="winner"><em>Klien:</em> Apartemen Mewah</span>
+<span class="price"><em>Layanan:</em> Modifikasi Sistem Gondola</span>
+</div>
+<div class="down-content">
+<div class="row">
+<div class="col-7">
+<h4>Gedung 20 Lantai <br/><span>Surabaya</span></h4>
+</div>
+<div class="col-5">
+<h4 class="pics">Selesai <br/><span>2023</span></h4>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="item">
+<div class="closed-item">
+<div class="thumb">
+<img alt="Gedung 15 Lantai Bandung" src="assets/fotofabrikasi/gondolapapua.jpg"/>
+<span class="winner"><em>Klien:</em> Gedung Perkantoran</span>
+<span class="price"><em>Layanan:</em> Maintenance &amp; Service</span>
+</div>
+<div class="down-content">
+<div class="row">
+<div class="col-7">
+<h4>Gedung 15 Lantai <br/><span>Bandung</span></h4>
+</div>
+<div class="col-5">
+<h4 class="pics">Selesai <br/><span>2022</span></h4>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-12">
+<div class="border-button text-center">
+<a href="contests.html">Lihat Proyek Lainnya</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="pricing-plans section-padding">
+<div class="container">
+<div class="row">
+<div class="col-lg-12">
+  <div class="section-title center pricing-title-premium" style="margin-bottom:36px;">
+    <h6 style="color:#21e6c1; font-size:1.18rem; font-weight:800; letter-spacing:2px; margin-bottom:6px; text-transform:uppercase;">
+      <i class="fa fa-box-open" style="color:#71bdf0; margin-right:7px;"></i> Paket Layanan
+    </h6>
+    <h2 class="pricing-title-gradient" style="font-size:2.6rem; font-weight:900; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:10px;">
+      Solusi <span style="color:#71bdf0;">Terjangkau</span>
+    </h2>
+    <div class="pricing-underline-premium"></div>
+    <p class="pricing-desc-premium">
+      Pilihan paket layanan profesional, transparan, dan terjangkau untuk kebutuhan gondola Anda. Setiap paket dirancang dengan standar keamanan dan kualitas terbaik.
+    </p>
+  </div>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-4 col-md-6">
+<div class="pricing-item">
+<img alt="Paket Maintenance" src="assets/images/pricing-01.jpg"/>
+<h4>Paket Maintenance</h4>
+<ul class="first-plan">
+<li>Pemeliharaan Berkala Gondola</li>
+<li>Inspeksi Komponen Utama</li>
+<li>Pengujian Sistem Elektrik &amp; Mekanik</li>
+<li>Kalibrasi Sistem Keselamatan</li>
+<li>Laporan Kondisi Terperinci</li>
+</ul>
+<span class="price"></span>
+<div class="border-button">
+<a href="#">Pilih Paket Ini</a>
+</div>
+</div>
+</div>
+<div class="col-lg-4 col-md-6">
+<div class="pricing-item">
+<img alt="Paket Modifikasi" src="assets/images/pricing-02.jpg"/>
+<h4>Paket Modifikasi</h4>
+<ul class="second-plan">
+<li>Penyesuaian Kapasitas Gondola</li>
+<li>Perubahan Dimensi Platform</li>
+<li>Penggantian Sistem Penggerak</li>
+<li>Peningkatan Komponen Keselamatan</li>
+<li>Sertifikasi Kelayakan</li>
+</ul>
+<span class="price"></span>
+<div class="border-button">
+<a href="#">Pilih Paket Ini</a>
+</div>
+</div>
+</div>
+<div class="col-lg-4 col-md-6">
+<div class="pricing-item">
+<img alt="Paket Fabrikasi" src="assets/images/pricing-03.jpg"/>
+<h4>Paket Fabrikasi</h4>
+<ul class="third-plan">
+<li>Perancangan Sistem Gondola Kustom</li>
+<li>Fabrikasi Unit Baru</li>
+<li>Pemasangan &amp; Uji Coba</li>
+<li>Training Operator</li>
+<li>Garansi 1 Tahun</li>
+</ul>
+<span class="price"></span>
+<div class="border-button">
+<a href="#">Pilih Paket Ini</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="clients section-padding">
+  <div class="container">
+    <div class="clients-title-premium" style="text-align:center; margin-bottom:44px;">
+      <h2 class="client-title-premium">
+        <span>Client Kami</span>
+      </h2>
+      <div class="client-underline-premium"></div>
+    </div>
+    <div class="client-slider owl-carousel">
+      <div class="client-item"><img alt="Client 1" src="assets/logoclient/pp.png"/></div>
+      <div class="client-item"><img alt="Client 2" src="assets/logoclient/pbs.jpg"/></div>
+      <div class="client-item"><img alt="Client 3" src="assets/logoclient/mulia.jpg"/></div>
+      <div class="client-item"><img alt="Client 4" src="assets/logoclient/kempinski.jpg"/></div>
+      <div class="client-item"><img alt="Client 5" src="assets/logoclient/polri.png"/></div>
+      <div class="client-item"><img alt="Client 6" src="assets/logoclient/uresidences.jpg"/></div>
+      <div class="client-item"><img alt="Client 7" src="assets/logoclient/bankmega.png"/></div>
+      <div class="client-item"><img alt="Client 8" src="assets/logoclient/inalum.png"/></div>
+      <div class="client-item"><img alt="Client 9" src="assets/logoclient/olive.jpg"/></div>
+      <div class="client-item"><img alt="Client 10" src="assets/logoclient/trakindo.jpg"/></div>
+      <div class="client-item"><img alt="Client 11" src="assets/logoclient/xlsmart.png"/></div>
+      <div class="client-item"><img alt="Client 12" src="assets/logoclient/provices.png"/></div>
+      <div class="client-item"><img alt="Client 13" src="assets/logoclient/nusaraya.jpg"/></div>
+      <div class="client-item"><img alt="Client 14" src="assets/logoclient/montsera.png"/></div>
+      <div class="client-item"><img alt="Client 15" src="assets/logoclient/bks.jpg"/></div>
+      <div class="client-item"><img alt="Client 16" src="assets/logoclient/wika.png"/></div>
+      <div class="client-item"><img alt="Client 17" src="assets/logoclient/pakkodian.png"/></div>
+    </div>
+  </div>
+</section>
+<!-- MODERN PORTFOLIO GALLERY START -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script><script>
+$(document).ready(function(){
+  $('.client-slider').owlCarousel({
+    loop:true,
+    margin:30,
+    nav:false,
+    autoplay:true,
+    autoplayTimeout:2500,
+    smartSpeed:700,
+    responsive:{
+      0:{ items:2 },
+      600:{ items:3 },
+      1000:{ items:5 }
+    }
+  });
+});
+</script>
+<script>
+function openPopupHubungi() {
+  document.getElementById('popup-hubungi').style.display = 'block';
+  document.getElementById('overlay-hubungi').style.display = 'block';
+}
+function closePopupHubungi() {
+  document.getElementById('popup-hubungi').style.display = 'none';
+  document.getElementById('overlay-hubungi').style.display = 'none';
+}
+function callPhone() {
+  window.location.href = 'tel:081220200690';
+}
+// Pop up pilihan email
+function openEmailPopup() {
+  document.getElementById('popup-email').style.display = 'block';
+  document.getElementById('overlay-email').style.display = 'block';
+}
+function closeEmailPopup() {
+  document.getElementById('popup-email').style.display = 'none';
+  document.getElementById('overlay-email').style.display = 'none';
+}
+document.addEventListener('DOMContentLoaded', function() {
+  var btn = document.getElementById('contactBtnPopup');
+  if(btn) btn.onclick = openPopupHubungi;
+});
+</script>
+</body>
+<footer class="footer-modern">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-12">
+        <div class="footer-content text-center">
+          <img alt="Logo Gondola" src="assets/images/Logo.png" style="max-height: 64px; max-width: 64px; margin-bottom: 18px; filter: drop-shadow(0 2px 12px #21e6c155);"/>
+          <h4 style="color:#fff; font-weight:800; letter-spacing:1.2px; margin-bottom:10px; text-shadow:0 2px 12px #1e3c7244;">
+            PT. Gondola Firdaus Pratama Jaya
+          </h4>
+          <div class="footer-divider" style="width:60px; height:4px; background:linear-gradient(90deg,#21e6c1 0%,#71bdf0  100%); border-radius:2px; margin:0 auto 18px auto;"></div>
+          <p style="color:#eaf6fa; font-size:1.08rem; font-weight:500; margin-bottom:18px; text-shadow:0 1px 8px #1e3c7222;">
+            Spesialis Sistem Gondola Profesional untuk Proyek Gedung Tinggi
+          </p>
+          <div class="footer-contact d-flex flex-column flex-md-row justify-content-center align-items-center gap-3" style="gap:18px; margin-bottom:18px;">
+            <span style="color:#21e6c1; font-size:1.13rem; font-weight:600; display:flex; align-items:center; gap:7px;">
+              <i class="fa fa-map-marker-alt" style="color:#71bdf0;"></i> Jl. Raya Pondok Petir No.118 RT 002/019 Bojongsari - Depok
+            </span>
+            <span class="footer-dot d-none d-md-inline" style="color:#21e6c1; font-size:1.5rem; margin:0 10px;">•</span>
+            <span style="color:#21e6c1; font-size:1.13rem; font-weight:600; display:flex; align-items:center; gap:7px;">
+              <i class="fab fa-whatsapp" style="color:#25d366;"></i> <a href="https://wa.me/6281220200690" style="color:#fff; font-weight:700; text-decoration:none; border-bottom:2px solid #25d366; transition:color .2s;">0812 2020 0690</a>
+            </span>
+            <span class="footer-dot d-none d-md-inline" style="color:#21e6c1; font-size:1.5rem; margin:0 10px;">•</span>
+            <span style="color:#21e6c1; font-size:1.13rem; font-weight:600; display:flex; align-items:center; gap:7px;">
+              <i class="fa fa-envelope" style="color:#71bdf0;"></i> <a href="mailto:gfgondola86@gmail.com" style="color:#fff; font-weight:700; text-decoration:none; border-bottom:2px solid #71bdf0; transition:color .2s;">gfgondola86@gmail.com</a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="copyright text-center" style="margin-top:18px; color:#eaf6fa; font-size:1rem; letter-spacing:0.5px;">
+          <span style="opacity:0.7;">Copyright © 2025 PT. Gondola Firdaus Pratama Jaya. All rights reserved.</span>
+        </div>
+        <div class="webmaker text-center" style="margin-top:6px; color:#eaf6fa; font-size:0.98rem; opacity:0.8;">
+          Web by
+          <a href="https://www.facebook.com/lieinsid" target="_blank" style="color:#21e6c1; font-weight:700; text-decoration:none; border-bottom:1.5px dotted #21e6c1; transition:color .2s;">
+            MCA
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<style>
+.footer-modern {
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  color: #fff;
+  border-top: 4px solid #21e6c1;
+  box-shadow: 0 -4px 32px #1e3c7211;
+  padding: 48px 0 18px 0;
+  position: relative;
+  overflow: hidden;
+}
+.footer-modern .footer-content h4 {
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  margin-bottom: 10px;
+}
+.footer-modern .footer-divider {
+  margin-bottom: 18px;
+}
+.footer-modern .footer-contact span {
+  font-size: 1.08rem;
+  color: #eaf6fa;
+  font-weight: 500;
+  transition: color .2s;
+}
+.footer-modern .footer-contact a {
+  color: #fff;
+  font-weight: 700;
+  border-bottom: 2px solid #21e6c1;
+  text-decoration: none;
+  transition: color .2s, border-color .2s;
+}
+.footer-modern .footer-contact a:hover {
+  color: #21e6c1;
+  border-color: #fff;
+}
+.footer-modern .footer-contact i {
+  font-size: 1.18rem;
+  margin-right: 4px;
+  transition: color .2s, transform .2s;
+}
+.footer-modern .footer-contact a:hover i.fa-whatsapp {
+  color: #21e6c1;
+  transform: scale(1.15);
+}
+.footer-modern .footer-contact a:hover i.fa-envelope {
+  color: #21e6c1;
+  transform: scale(1.15);
+}
+.footer-modern .copyright {
+  margin-top: 18px;
+  color: #eaf6fa;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  opacity: 0.8;
+}
+@media (max-width: 767px) {
+  .footer-modern {
+    padding: 32px 0 10px 0;
+  }
+  .footer-modern .footer-content h4 {
+    font-size: 1.1rem;
+  }
+  .footer-modern .footer-contact span {
+    font-size: 0.98rem;
+  }
+}
+@media (max-width: 575px) {
+  .footer-modern {
+    padding: 22px 0 6px 0;
+  }
+  .footer-modern .footer-content h4 {
+    font-size: 1rem;
+  }
+  .footer-modern .footer-contact span {
+    font-size: 0.92rem;
+  }
+  .footer-modern .footer-divider {
+    margin-bottom: 10px;
+  }
+}
+</style>
+<!-- Floating WhatsApp Button -->
+<a class="floating-wa" href="https://wa.me/6281220200690" target="_blank" title="Hubungi Kami via WhatsApp" tabindex="0">
+  <span class="wa-circle">
+    <i class="fab fa-whatsapp"></i>
+  </span>
+  <span class="tooltip">Chat via WhatsApp</span>
+</a>
+<!-- Scripts -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/js/isotope.min.js"></script>
+<script src="assets/js/owl-carousel.js"></script>
+<script src="assets/js/tabs.js"></script>
+<script src="assets/js/popup.js"></script>
+<script src="assets/js/custom.js"></script>
+<style>
+.floating-wa {
+  position: fixed;
+  right: 32px;
+  bottom: 32px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 62px;
+  height: 62px;
+  background: none;
+  border: none;
+  outline: none;
+  text-decoration: none;
+}
+.floating-wa .wa-circle {
+  width: 62px;
+  height: 62px;
+  background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+  color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 8px 32px rgba(30,60,114,0.18), 0 2px 8px rgba(33,230,193,0.13);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.1rem;
+  border: 2.5px solid #fff;
+  outline: 2.5px solid #25d36633;
+  transition: box-shadow 0.25s, transform 0.18s, background 0.25s;
+  animation: wa-float-in 0.7s cubic-bezier(.4,0,.2,1);
+}
+.floating-wa:hover .wa-circle, .floating-wa:focus .wa-circle {
+  background: linear-gradient(135deg, #128c7e 0%, #25d366 100%);
+  box-shadow: 0 12px 36px rgba(30,60,114,0.22), 0 4px 16px #25d36644;
+  transform: scale(1.09) translateY(-4px) rotate(-6deg);
+  outline: 3.5px solid #25d36699;
+}
+.floating-wa .wa-circle i {
+  animation: wa-icon-bounce 1.6s infinite cubic-bezier(.4,0,.2,1);
+}
+.floating-wa .tooltip {
+  display: none;
+  position: absolute;
+  right: 70px;
+  bottom: 50%;
+  transform: translateY(50%);
+  background: #222;
+  color: #fff;
+  padding: 7px 18px;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  white-space: nowrap;
+  box-shadow: 0 2px 12px rgba(30,60,114,0.13);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.22s, right 0.22s;
+}
+.floating-wa:hover .tooltip, .floating-wa:focus .tooltip {
+  display: block;
+  opacity: 1;
+  right: 80px;
+}
+@keyframes wa-float-in {
+  0% { opacity: 0; transform: scale(0.7) translateY(60px); }
+  100% { opacity: 1; transform: scale(1) translateY(0); }
+}
+@keyframes wa-icon-bounce {
+  0%, 100% { transform: translateY(0); }
+  20% { transform: translateY(-7px); }
+  40% { transform: translateY(0); }
+  60% { transform: translateY(-4px); }
+  80% { transform: translateY(0); }
+}
+@media (max-width: 575px) {
+  .floating-wa, .floating-wa .wa-circle {
+    right: 16px;
+    bottom: 16px;
+    width: 52px;
+    height: 52px;
+    font-size: 1.5rem;
+  }
+  .floating-wa .tooltip {
+    font-size: 0.92rem;
+    right: 60px;
+  }
+}
+@media (max-width: 575px) {
+  .main-banner .buttons {
+    flex-direction: column !important;
+    gap: 10px !important;
+    align-items: stretch !important;
+    width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .main-banner .main-banner-btn {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    font-size: 1rem !important;
+    margin: 0 !important;
+    display: block !important;
+  }
+  .main-banner .header-text {
+    padding-left: 0.2rem !important;
+    padding-right: 0.2rem !important;
+  }
+  .main-banner .row,
+  .main-banner .container {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+</style>

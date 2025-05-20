@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+  <meta name="description" content="Produk Gondola - PT. Gondola Firdaus Pratama Jaya"/>
+  <title>Produk Gondola | PT. Gondola Firdaus Pratama Jaya</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="assets/css/fontawesome.css" rel="stylesheet"/>
+  <link href="assets/css/gf.css" rel="stylesheet"/>
+  <link href="assets/css/owl.css" rel="stylesheet"/>
+  <link href="assets/css/animate.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet"/>
+  <style>
+    :root {
+      --primary-color: #1e3c72;
+      --secondary-color: #2a5298;
+      --accent-color: #25d366;
+      --gradient-main: linear-gradient(135deg, #6ddcff 0%, #1e3c72 100%);
+      --gradient-btn: linear-gradient(90deg, #21e6c1 0%, #1e3c72 100%);
+      --gradient-light: linear-gradient(135deg, #eaf6fa 0%, #f8fcff 100%);
+      --white: #fff;
+      --gray-light: #f8fcff;
+      --shadow: 0 8px 32px rgba(30,60,114,0.10);
+      --shadow-hover: 0 16px 48px rgba(30,60,114,0.16);
+      --transition: all 0.3s cubic-bezier(.4,0,.2,1);
+      --font-main: 'Poppins', 'Inter', 'Segoe UI', Arial, sans-serif;
+    }
+    body {
+      background: var(--gray-light);
+      color: #222;
+      font-family: var(--font-main);
+      font-size: 1.07rem;
+      letter-spacing: 0.01em;
+    }
+    /* === PREMIUM HEADER === */
+    .unified-header {
+      background: var(--gradient-main);
+      color: var(--white);
+      box-shadow: 0 8px 32px rgba(30,60,114,0.13);
+      border-bottom-left-radius: 32px;
+      border-bottom-right-radius: 32px;
+      font-family: var(--font-main);
+      position: sticky;
+      top: 0;
+      z-index: 1050;
+    }
+    .unified-header .navbar {
+      font-weight: 700;
+      font-size: 1.13rem;
+      letter-spacing: 0.5px;
+    }
+    .unified-header .navbar-brand img {
+      border-radius: 18px;
+      background: var(--white);
+      box-shadow: 0 2px 12px #21e6c144;
+      padding: 4px 12px;
+      transition: box-shadow .2s, transform .2s;
+    }
+    .unified-header .navbar-brand img:hover {
+      box-shadow: 0 8px 32px #21e6c199;
+      transform: scale(1.07) rotate(-2deg);
+    }
+    .unified-header .nav-link,
+    .unified-header .btn-contact {
+      font-family: var(--font-main);
+      font-weight: 700;
+      border-radius: 18px;
+      transition: var(--transition);
+    }
+    .unified-header .nav-link {
+      padding: 10px 22px;
+      margin: 0 2px;
+      color: var(--white);
+    }
+    .unified-header .nav-link.active,
+    .unified-header .nav-link:hover,
+    .unified-header .nav-link:focus {
+      background: var(--gradient-btn);
+      color: #fff;
+      box-shadow: 0 4px 18px #21e6c144;
+      transform: translateY(-2px) scale(1.04);
+    }
+    .unified-header .btn-contact {
+      background: var(--gradient-btn);
+      color: #fff;
+      border-radius: 24px;
+      padding: 12px 32px;
+      box-shadow: 0 4px 18px #21e6c133;
+      font-size: 1.13rem;
+      margin-left: 18px;
+      border: none;
+      transition: var(--transition);
+    }
+    .unified-header .btn-contact:hover,
+    .unified-header .btn-contact:focus {
+      background: linear-gradient(90deg,#1e3c72 0%,#21e6c1 100%);
+      color: #fff;
+      box-shadow: 0 8px 32px #21e6c144;
+      transform: scale(1.06) translateY(-2px);
+    }
+    /* === PREMIUM BUTTONS === */
+    .btn, .main-button a, .wa-btn, .popup button, .popup .phone-btn, .popup .email-btn, .popup .close-btn {
+      border-radius: 24px;
+      background: var(--gradient-btn);
+      color: #fff;
+      font-family: var(--font-main);
+      font-weight: 700;
+      box-shadow: 0 4px 18px #21e6c133;
+      transition: var(--transition);
+      border: none;
+    }
+    .btn:hover, .main-button a:hover, .wa-btn:hover, .popup button:hover {
+      background: linear-gradient(90deg,#1e3c72 0%,#21e6c1 100%);
+      color: #fff;
+      box-shadow: 0 8px 32px #21e6c144;
+      transform: scale(1.05) translateY(-2px);
+    }
+    /* === PREMIUM CARD/CONTAINER === */
+    .produk-gallery {
+      background: var(--gradient-light);
+      border-radius: 32px;
+      box-shadow: var(--shadow);
+      padding: 60px 0 40px 0;
+      margin-top: -48px;
+      margin-bottom: 48px;
+      transition: var(--transition);
+    }
+    .produk-card {
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      background: #fff;
+      transition: var(--transition);
+      margin-bottom: 32px;
+      overflow: hidden;
+      position: relative;
+      border: none;
+      animation: produkFadeIn 0.7s cubic-bezier(.4,0,.2,1) forwards;
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    .produk-card:nth-child(1) { animation-delay: 0.1s; }
+    .produk-card:nth-child(2) { animation-delay: 0.2s; }
+    .produk-card:nth-child(3) { animation-delay: 0.3s; }
+    .produk-card:nth-child(4) { animation-delay: 0.4s; }
+    .produk-card:nth-child(5) { animation-delay: 0.5s; }
+    .produk-card:nth-child(6) { animation-delay: 0.6s; }
+    @keyframes produkFadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .produk-card:hover {
+      box-shadow: var(--shadow-hover);
+      transform: translateY(-6px) scale(1.03);
+    }
+    .produk-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-top-left-radius: 24px;
+      border-top-right-radius: 24px;
+      transition: transform .22s;
+    }
+    .produk-card:hover img {
+      transform: scale(1.04) translateY(-4px);
+    }
+    .produk-card-body {
+      padding: 24px 18px 18px 18px;
+    }
+    .produk-card-title {
+      font-size: 1.18rem;
+      font-weight: 800;
+      color: var(--primary-color);
+      margin-bottom: 8px;
+      font-family: var(--font-main);
+    }
+    .produk-card-desc {
+      font-size: 1.05rem;
+      color: var(--secondary-color);
+      margin-bottom: 14px;
+      min-height: 56px;
+      font-family: var(--font-main);
+    }
+    /* === PREMIUM BADGE/PILL === */
+    .produk-badge {
+      position: absolute;
+      top: 18px;
+      left: 18px;
+      background: var(--gradient-btn);
+      color: #fff;
+      font-size: 0.98rem;
+      font-weight: 700;
+      padding: 8px 22px;
+      border-radius: 999px;
+      box-shadow: 0 2px 8px #21e6c133;
+      z-index: 2;
+      letter-spacing: 1px;
+      font-family: var(--font-main);
+      transition: var(--transition);
+    }
+    /* === PREMIUM POPUP/MODAL === */
+    .popup,
+    #popup-hubungi,
+    #popup-email {
+      border-radius: 28px;
+      box-shadow: 0 8px 32px rgba(30,60,114,0.18);
+      background: #fff;
+      animation: premium-popup-in 0.4s cubic-bezier(.4,0,.2,1);
+      font-family: var(--font-main);
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2000;
+      min-width: 320px;
+      max-width: 94vw;
+      width: 350px;
+      padding: 32px 28px 24px 28px;
+      box-sizing: border-box;
+      text-align: center;
+      display: none;
+    }
+    #popup-hubungi[style*="block"],
+    #popup-email[style*="block"] {
+      display: block;
+    }
+    .popup h3,
+    #popup-hubungi h3,
+    #popup-email h3 {
+      margin-bottom: 22px;
+      font-size: 1.25rem;
+      color: #1e3c72;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+    }
+    .popup button,
+    #popup-hubungi button,
+    #popup-email button {
+      display: block;
+      width: 100%;
+      margin: 10px 0;
+      padding: 12px 0;
+      border-radius: 18px;
+      font-size: 1.08rem;
+      font-weight: 700;
+      box-shadow: 0 2px 12px #21e6c133;
+      border: none;
+      transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+    }
+    .popup button:not(.close-btn):hover,
+    #popup-hubungi button:not(.close-btn):hover,
+    #popup-email button:not(.close-btn):hover {
+      background: linear-gradient(90deg,#1e3c72 0%,#21e6c1 100%);
+      color: #fff;
+      box-shadow: 0 8px 32px #21e6c144;
+    }
+    .popup .close-btn,
+    #popup-hubungi .close-btn,
+    #popup-email .close-btn {
+      background: #eaf6fa;
+      color: #1e3c72;
+      font-weight: 700;
+      margin-top: 16px;
+      border-radius: 18px;
+      border: none;
+      box-shadow: 0 2px 8px #21e6c122;
+      transition: background 0.3s, color 0.3s;
+    }
+    .popup .close-btn:hover,
+    #popup-hubungi .close-btn:hover,
+    #popup-email .close-btn:hover {
+      background: #21e6c1;
+      color: #fff;
+    }
+    .popup span,
+    #popup-hubungi span,
+    #popup-email span {
+      font-size: 1.08rem;
+    }
+    .overlay,
+    #overlay-hubungi,
+    #overlay-email {
+      background: rgba(30,60,114,0.18) !important;
+      backdrop-filter: blur(2px);
+    }
+    /* === PREMIUM TYPOGRAPHY === */
+    h1, h2, h3, h4, h5, h6, .section-title {
+      font-family: var(--font-main);
+      font-weight: 900;
+      letter-spacing: 1.2px;
+      color: var(--primary-color);
+    }
+    .section-title {
+      font-size: 2.1rem;
+      font-weight: 900;
+      color: var(--primary-color);
+      letter-spacing: 1.2px;
+      text-align: center;
+    }
+    h5, h4 {
+      font-weight: 800;
+      color: #21e6c1;
+    }
+    p, li, span, a {
+      font-family: var(--font-main);
+      font-weight: 500;
+      font-size: 1.07rem;
+      color: #2a5298;
+    }
+    a {
+      transition: color 0.22s;
+    }
+    a:hover, a:focus {
+      color: #21e6c1;
+      text-decoration: underline;
+    }
+    /* === PREMIUM FOOTER === */
+    .footer-modern {
+      background: var(--gradient-main);
+      border-top-left-radius: 32px;
+      border-top-right-radius: 32px;
+      box-shadow: 0 -4px 24px rgba(30,60,114,0.13);
+      color: #fff;
+      font-family: var(--font-main);
+    }
+    .footer-content img {
+      border-radius: 18px;
+      background: #fff;
+      box-shadow: 0 2px 12px #21e6c144;
+      padding: 4px 12px;
+    }
+    .footer-content h4 {
+      font-weight: 900;
+      color: #fff;
+      letter-spacing: 1.2px;
+      text-shadow: 0 2px 12px #1e3c7244;
+    }
+    .footer-divider {
+      background: linear-gradient(90deg,#21e6c1 0%,#71bdf0 100%);
+      border-radius: 2px;
+    }
+    .footer-contact span,
+    .footer-contact a {
+      font-family: var(--font-main);
+      font-weight: 600;
+      color: #21e6c1;
+      font-size: 1.13rem;
+    }
+    .footer-contact a {
+      color: #fff;
+      border-bottom: 2px solid #21e6c1;
+      transition: color .2s, border-color .2s;
+    }
+    .footer-contact a:hover {
+      color: #21e6c1;
+      border-color: #fff;
+    }
+    /* === PREMIUM FLOATING WHATSAPP BUTTON === */
+    .floating-wa {
+      position: fixed;
+      right: 32px;
+      bottom: 32px;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 62px;
+      height: 62px;
+      background: none;
+      border: none;
+      outline: none;
+      text-decoration: none;
+    }
+    .floating-wa .wa-circle {
+      width: 62px;
+      height: 62px;
+      background: linear-gradient(135deg, #25d366 0%, #1e3c72 100%);
+      color: #fff;
+      border-radius: 50%;
+      box-shadow: 0 8px 32px rgba(30,60,114,0.18), 0 2px 8px rgba(33,230,193,0.13);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.1rem;
+      border: 3px solid #fff;
+      outline: 3px solid #25d36633;
+      transition: var(--transition);
+    }
+    .floating-wa:hover .wa-circle,
+    .floating-wa:focus .wa-circle {
+      background: linear-gradient(135deg, #1e3c72 0%, #25d366 100%);
+      box-shadow: 0 12px 36px rgba(30,60,114,0.22), 0 4px 16px #25d36644;
+      transform: scale(1.09) translateY(-4px) rotate(-6deg);
+      outline: 4px solid #21e6c199;
+    }
+    .floating-wa .tooltip {
+      border-radius: 8px;
+      background: #1e3c72;
+      color: #fff;
+      box-shadow: 0 2px 12px #21e6c144;
+      font-family: var(--font-main);
+      font-weight: 600;
+      font-size: 1rem;
+      transition: var(--transition);
+      display: none;
+      position: absolute;
+      right: 70px;
+      bottom: 50%;
+      transform: translateY(50%);
+      padding: 7px 18px;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+    }
+    .floating-wa:hover .tooltip, .floating-wa:focus .tooltip {
+      display: block;
+      opacity: 1;
+      right: 80px;
+    }
+    /* === RESPONSIVE PREMIUM === */
+    @media (max-width: 991px) {
+      .unified-header,
+      .footer-modern,
+      .produk-gallery,
+      .popup,
+      #popup-hubungi,
+      #popup-email {
+        border-radius: 18px;
+      }
+      .unified-header .btn-contact {
+        border-radius: 18px;
+        font-size: 1rem;
+        padding: 10px 18px;
+      }
+      .footer-content img {
+        border-radius: 12px;
+        padding: 2px 6px;
+      }
+      .produk-card img { height: 160px; border-top-left-radius: 18px; border-top-right-radius: 18px; }
+    }
+    @media (max-width: 575px) {
+      .unified-header,
+      .footer-modern,
+      .produk-gallery,
+      .popup,
+      #popup-hubungi,
+      #popup-email {
+        border-radius: 8px;
+      }
+      .unified-header .btn-contact {
+        border-radius: 12px;
+        font-size: 0.95rem;
+        padding: 7px 10px;
+      }
+      .footer-content img {
+        border-radius: 8px;
+        padding: 1px 3px;
+      }
+      .produk-card img { height: 110px; border-top-left-radius: 8px; border-top-right-radius: 8px; }
+      .produk-card-body { padding: 12px 8px 10px 8px; }
+      .produk-card-title { font-size: 1rem; }
+      .produk-gallery .section-title { font-size: 1.1rem; margin-bottom: 18px; }
+    }
+    /* === PREMIUM SCROLLBAR === */
+    ::-webkit-scrollbar {
+      width: 8px;
+      background: #eaf6fa;
+      border-radius: 8px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: linear-gradient(135deg, #21e6c1 0%, #1e3c72 100%);
+      border-radius: 8px;
+    }
+
+    /* Dropdown hover for "Layanan" menu on desktop */
+    @media (min-width: 992px) {
+      .navbar-nav .dropdown:hover > .dropdown-menu,
+      .navbar-nav .dropdown:focus-within > .dropdown-menu {
+        display: block;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: translateY(0);
+        transition: opacity 0.22s cubic-bezier(.4,0,.2,1), transform 0.22s cubic-bezier(.4,0,.2,1);
+      }
+      .navbar-nav .dropdown-menu {
+        display: block;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        min-width: 220px;
+        background: linear-gradient(135deg, #f8fcff 0%, #eaf6fa 100%) !important;
+        box-shadow: 0 8px 32px #21e6c122, 0 2px 8px #1e3c7211 !important;
+        border-radius: 18px !important;
+        padding: 0.5rem 0;
+        margin-top: 10px;
+        transform: translateY(16px);
+        transition: opacity 0.22s cubic-bezier(.4,0,.2,1), transform 0.22s cubic-bezier(.4,0,.2,1);
+        border: none !important;
+      }
+      .navbar-nav .dropdown:hover > .nav-link,
+      .navbar-nav .dropdown:focus-within > .nav-link {
+        background: linear-gradient(90deg,#21e6c1 0%,#1e3c72 100%) !important;
+        color: #fff !important;
+        box-shadow: 0 4px 18px #21e6c144;
+      }
+      .navbar-nav .dropdown-menu .dropdown-item {
+        color: #1e3c72 !important;
+        background: transparent !important;
+        font-weight: 600;
+        padding: 12px 28px;
+        font-size: 1.07rem;
+        border-radius: 10px !important;
+        transition: background 0.18s, color 0.18s;
+        margin: 2px 8px;
+        letter-spacing: 0.2px;
+      }
+      .navbar-nav .dropdown-menu .dropdown-item:hover,
+      .navbar-nav .dropdown-menu .dropdown-item:focus {
+        background: linear-gradient(90deg,#21e6c1 0%,#1e3c72 100%) !important;
+        color: #fff !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="header-template"></div>
+
+  <!-- Hero Produk -->
+  <section class="produk-hero">
+    <div class="container text-center">
+      <h1>Produk Gondola &amp; Sparepart</h1>
+      <p>
+        Temukan berbagai produk gondola, sparepart, dan sistem pendukung terbaik untuk kebutuhan proyek gedung tinggi Anda. Semua produk kami bergaransi dan sesuai standar keselamatan nasional.
+      </p>
+    </div>
+  </section>
+
+  <!-- Produk Gallery -->
+  <section class="produk-gallery">
+    <div class="container">
+      <div class="section-title">Pilihan Produk Unggulan</div>
+      <div class="row">
+        <!-- Produk 1 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="produk-card">
+            <span class="produk-badge">Gondola Baru</span>
+            <img src="assets/images/produk-gondola-baru.jpg" alt="Gondola Baru"/>
+            <div class="produk-card-body">
+              <div class="produk-card-title">Gondola Suspended Platform</div>
+              <div class="produk-card-desc">
+                Platform gondola custom untuk pekerjaan facade, pembersihan kaca, dan konstruksi. Material kuat, kapasitas hingga 800kg, sistem pengaman ganda.
+              </div>
+              <div class="main-button">
+                <a href="https://wa.me/6281220200690" target="_blank"><i class="fab fa-whatsapp"></i> Konsultasi</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Produk 2 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="produk-card">
+            <span class="produk-badge" style="background:linear-gradient(90deg,#71bdf0 0%,#1e3c72 100%);">Sparepart</span>
+            <img src="assets/images/produk-sparepart.jpg" alt="Sparepart Gondola"/>
+            <div class="produk-card-body">
+              <div class="produk-card-title">Sparepart Gondola Original</div>
+              <div class="produk-card-desc">
+                Tersedia motor gondola, wire rope, safety lock, control box, dan komponen lain. Original &amp; OEM, pengiriman cepat, garansi resmi.
+              </div>
+              <div class="main-button">
+                <a href="https://wa.me/6281220200690" target="_blank"><i class="fab fa-whatsapp"></i> Pesan Sparepart</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Produk 3 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="produk-card">
+            <span class="produk-badge" style="background:linear-gradient(90deg,#25d366 0%,#1e3c72 100%);">Modifikasi</span>
+            <img src="assets/images/produk-modifikasi.jpg" alt="Modifikasi Gondola"/>
+            <div class="produk-card-body">
+              <div class="produk-card-title">Modifikasi &amp; Upgrade Gondola</div>
+              <div class="produk-card-desc">
+                Penyesuaian kapasitas, perubahan dimensi, upgrade sistem penggerak &amp; safety. Solusi untuk gondola lama agar lebih efisien dan aman.
+              </div>
+              <div class="main-button">
+                <a href="https://wa.me/6281220200690" target="_blank"><i class="fab fa-whatsapp"></i> Tanya Modifikasi</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Produk 4 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="produk-card">
+            <span class="produk-badge" style="background:linear-gradient(90deg,#2a5298 0%,#21e6c1 100%);">Aksesoris</span>
+            <img src="assets/images/produk-aksesoris.jpg" alt="Aksesoris Gondola"/>
+            <div class="produk-card-body">
+              <div class="produk-card-title">Aksesoris &amp; Safety Equipment</div>
+              <div class="produk-card-desc">
+                Harness, lifeline, helm, dan perlengkapan keselamatan kerja gondola. Standar SNI, nyaman &amp; aman untuk operator.
+              </div>
+              <div class="main-button">
+                <a href="https://wa.me/6281220200690" target="_blank"><i class="fab fa-whatsapp"></i> Info Aksesoris</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Produk 5 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="produk-card">
+            <span class="produk-badge" style="background:linear-gradient(90deg,#1e3c72 0%,#71bdf0 100%);">Panel Kontrol</span>
+            <img src="assets/images/produk-panel.jpg" alt="Panel Kontrol Gondola"/>
+            <div class="produk-card-body">
+              <div class="produk-card-title">Panel Kontrol Gondola</div>
+              <div class="produk-card-desc">
+                Panel kontrol digital/manual, fitur emergency stop, indikator overload, dan sistem keamanan listrik. Bisa custom sesuai kebutuhan.
+              </div>
+              <div class="main-button">
+                <a href="https://wa.me/6281220200690" target="_blank"><i class="fab fa-whatsapp"></i> Konsultasi Panel</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Produk 6 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="produk-card">
+            <span class="produk-badge" style="background:linear-gradient(90deg,#21e6c1 0%,#25d366 100%);">Rental</span>
+            <img src="assets/images/produk-rental.jpg" alt="Rental Gondola"/>
+            <div class="produk-card-body">
+              <div class="produk-card-title">Rental Gondola</div>
+              <div class="produk-card-desc">
+                Sewa gondola harian/mingguan/bulanan. Unit terawat, siap pakai, harga kompetitif, support teknis 24 jam.
+              </div>
+              <div class="main-button">
+                <a href="https://wa.me/6281220200690" target="_blank"><i class="fab fa-whatsapp"></i> Sewa Sekarang</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Tambahkan produk lain jika diperlukan -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Floating WhatsApp Button -->
+  <a class="floating-wa" href="https://wa.me/6281220200690" target="_blank" title="Hubungi Kami via WhatsApp" tabindex="0">
+    <span class="wa-circle">
+      <i class="fab fa-whatsapp"></i>
+    </span>
+    <span class="tooltip">Chat via WhatsApp</span>
+  </a>
+
+  <!-- Popup Hubungi Kami (copy dari index) -->
+  <div class="overlay" id="overlay-hubungi" onclick="closePopupHubungi()" style="display:none;"></div>
+  <div class="popup" id="popup-hubungi" style="display:none;">
+    <h3>Pilih Metode Kontak</h3>
+    <button type="button" class="phone-btn" onclick="callPhone()">
+      Hubungi via Telepon<br>
+      <span style="font-size:1.1em;font-weight:600;">081220200690</span>
+    </button>
+    <button type="button" class="email-btn" onclick="openEmailPopup()">
+      Hubungi via Email<br>
+      <span style="font-size:1.1em;font-weight:600;">gfgondola86@gmail.com</span>
+    </button>
+    <button type="button" class="close-btn" onclick="closePopupHubungi()">Tutup</button>
+  </div>
+  <div class="overlay" id="overlay-email" onclick="closeEmailPopup()" style="display:none;"></div>
+  <div class="popup" id="popup-email" style="display:none;">
+    <h3>Pilih Aplikasi Email</h3>
+    <button type="button" onclick="window.open('mailto:gfgondola86@gmail.com','_self');closeEmailPopup();">Default Email</button>
+    <button type="button" onclick="window.open('https://mail.google.com/mail/?view=cm&fs=1&to=gfgondola86@gmail.com','_blank');closeEmailPopup();">Gmail Web</button>
+    <button type="button" onclick="window.open('https://compose.mail.yahoo.com/?to=gfgondola86@gmail.com','_blank');closeEmailPopup();">Yahoo Mail</button>
+    <button type="button" onclick="window.open('https://outlook.live.com/mail/0/deeplink/compose?to=gfgondola86@gmail.com','_blank');closeEmailPopup();">Outlook Web</button>
+    <button type="button" class="close-btn" onclick="closeEmailPopup()">Batal</button>
+  </div>
+
+  <div id="footer-template"></div>
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="template.js"></script>
+  <script>
+    loadTemplate('#header-template', 'header.html', function() {
+      if (window.jQuery && window.jQuery.fn.dropdown) {
+        $('.dropdown-toggle').dropdown();
+      }
+      var btn = document.getElementById('contactBtnPopup');
+      if (btn) btn.onclick = openPopupHubungi;
+    });
+    loadTemplate('#footer-template', 'footer.html');
+  </script>
+  <script>
+  function openPopupHubungi() {
+    document.getElementById('popup-hubungi').style.display = 'block';
+    document.getElementById('overlay-hubungi').style.display = 'block';
+  }
+  function closePopupHubungi() {
+    document.getElementById('popup-hubungi').style.display = 'none';
+    document.getElementById('overlay-hubungi').style.display = 'none';
+  }
+  function callPhone() {
+    window.location.href = 'tel:081220200690';
+  }
+  function openEmailPopup() {
+    document.getElementById('popup-email').style.display = 'block';
+    document.getElementById('overlay-email').style.display = 'block';
+  }
+  function closeEmailPopup() {
+    document.getElementById('popup-email').style.display = 'none';
+    document.getElementById('overlay-email').style.display = 'none';
+  }
+  document.addEventListener('DOMContentLoaded', function() {
+    var btn = document.getElementById('contactBtnPopup');
+    if(btn) btn.onclick = openPopupHubungi;
+  });
+  </script>
+
+  <style>
+  /* Floating WhatsApp Button */
+  .floating-wa {
+    position: fixed;
+    right: 32px;
+    bottom: 32px;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 62px;
+    height: 62px;
+    background: none;
+    border: none;
+    outline: none;
+    text-decoration: none;
+  }
+  .floating-wa .wa-circle {
+    width: 62px;
+    height: 62px;
+    background: linear-gradient(135deg, #25d366 0%, #1e3c72 100%);
+    color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 8px 32px rgba(30,60,114,0.18), 0 2px 8px rgba(33,230,193,0.13);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.1rem;
+    border: 2.5px solid #fff;
+    outline: 2.5px solid #25d36633;
+    transition: box-shadow 0.25s, transform 0.18s, background 0.25s;
+    animation: wa-float-in 0.7s cubic-bezier(.4,0,.2,1);
+  }
+  .floating-wa:hover .wa-circle, .floating-wa:focus .wa-circle {
+    background: linear-gradient(135deg, #128c7e 0%, #25d366 100%);
+    box-shadow: 0 12px 36px rgba(30,60,114,0.22), 0 4px 16px #25d36644;
+    transform: scale(1.09) translateY(-4px) rotate(-6deg);
+    outline: 3.5px solid #25d36699;
+  }
+  .floating-wa .wa-circle i {
+    animation: wa-icon-bounce 1.6s infinite cubic-bezier(.4,0,.2,1);
+  }
+  .floating-wa .tooltip {
+    display: none;
+    position: absolute;
+    right: 70px;
+    bottom: 50%;
+    transform: translateY(50%);
+    background: #222;
+    color: #fff;
+    padding: 7px 18px;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 500;
+    white-space: nowrap;
+    box-shadow: 0 2px 12px rgba(30,60,114,0.13);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.22s, right 0.22s;
+  }
+  .floating-wa:hover .tooltip, .floating-wa:focus .tooltip {
+    display: block;
+    opacity: 1;
+    right: 80px;
+  }
+  @keyframes wa-float-in {
+    0% { opacity: 0; transform: scale(0.7) translateY(60px); }
+    100% { opacity: 1; transform: scale(1) translateY(0); }
+  }
+  @keyframes wa-icon-bounce {
+    0%, 100% { transform: translateY(0); }
+    20% { transform: translateY(-7px); }
+    40% { transform: translateY(0); }
+    60% { transform: translateY(-4px); }
+    80% { transform: translateY(0); }
+  }
+  @media (max-width: 575px) {
+    .floating-wa, .floating-wa .wa-circle {
+      right: 16px;
+      bottom: 16px;
+      width: 52px;
+      height: 52px;
+      font-size: 1.5rem;
+    }
+    .floating-wa .tooltip {
+      font-size: 0.92rem;
+      right: 60px;
+    }
+  }
+  /* Animasi fade-in untuk produk */
+  .produk-card {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: produkFadeIn 0.7s cubic-bezier(.4,0,.2,1) forwards;
+  }
+  .produk-card:nth-child(1) { animation-delay: 0.1s; }
+  .produk-card:nth-child(2) { animation-delay: 0.2s; }
+  .produk-card:nth-child(3) { animation-delay: 0.3s; }
+  .produk-card:nth-child(4) { animation-delay: 0.4s; }
+  .produk-card:nth-child(5) { animation-delay: 0.5s; }
+  .produk-card:nth-child(6) { animation-delay: 0.6s; }
+
+  @keyframes produkFadeIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  </style>
+</body>
+</html>
