@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
+  <meta content="PT. Gondola Firdaus Pratama Jaya - Spesialis Gondola Profesional untuk Proyek Konstruksi" name="description"/>
+  <title>PT. Gondola Firdaus Pratama Jaya - Tentang Kami</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="assets/css/fontawesome.css" rel="stylesheet"/>
+  <link href="assets/css/gf.css" rel="stylesheet"/>
+  <link href="assets/css/owl.css" rel="stylesheet"/>
+  <link href="assets/css/animate.css" rel="stylesheet"/>
+  <link href="https://unpkg.com/swiper@7/swiper-bundle.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet"/>
+  <style>
+    /* === WARNA UTAMA DAN GRADASI === */
+:root {
+  --primary-color: #1e3c72;
+  --secondary-color: #2a5298;
+  --accent-color: #25d366;
+  --gradient-main: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  --gradient-light: linear-gradient(135deg, #71bdf0 0%, #1e3c72 100%);
+  --white: #fff;
+  --shadow: 0 4px 16px rgba(30,60,114,0.08);
+  --transition: all 0.3s cubic-bezier(.4,0,.2,1);
+}
+
+/* --- SMOOTH TRANSITIONS & MODERN LOOK --- */
+html {
+  scroll-behavior: smooth;
+  background: #f8fcff;
+}
+body {
+  background: #f8fcff;
+  color: #222;
+  font-family: 'Poppins', 'Inter', 'Segoe UI', Arial, sans-serif;
+  font-size: 1.07rem;
+  letter-spacing: 0.01em;
+  transition: background 0.4s cubic-bezier(.4,0,.2,1), color 0.3s cubic-bezier(.4,0,.2,1);
+}
+.section-padding,
+.card,
+.layanan-area,
+.featured-items,
+.popular-categories,
+.closed-contests,
+.pricing-plans,
+.clients,
+.footer-modern,
+.popup,
+#popup-hubungi,
+#popup-email {
+  border-radius: 32px;
+  box-shadow: 0 8px 32px rgba(30,60,114,0.10);
+  background: #fff;
+  transition: box-shadow 0.35s cubic-bezier(.4,0,.2,1), background 0.35s cubic-bezier(.4,0,.2,1), border-radius 0.35s cubic-bezier(.4,0,.2,1);
+}
+.card:hover,
+.layanan-item:hover,
+.popular-item:hover,
+.pricing-item:hover,
+.closed-item:hover,
+.section-padding:hover {
+  box-shadow: 0 24px 64px 0 rgba(30,60,114,0.18), 0 2px 8px #21e6c144;
+  transform: translateY(-6px) scale(1.025);
+  transition: box-shadow 0.35s cubic-bezier(.4,0,.2,1), transform 0.25s cubic-bezier(.4,0,.2,1);
+}
+
+/* --- HEADER SMOOTH SHADOW --- */
+.unified-header {
+  background: linear-gradient(135deg, #6ddcff 0%, #1e3c72 100%);
+  color: #fff;
+  box-shadow: 0 8px 32px rgba(30,60,114,0.13), 0 2px 8px #21e6c122;
+  border-bottom-left-radius: 32px;
+  border-bottom-right-radius: 32px;
+  font-family: 'Poppins', 'Inter', 'Segoe UI', Arial, sans-serif;
+  position: sticky;
+  top: 0;
+  z-index: 1050;
+  transition: box-shadow 0.35s cubic-bezier(.4,0,.2,1), background 0.35s cubic-bezier(.4,0,.2,1);
+}
+.unified-header .navbar {
+  font-weight: 700;
+  font-size: 1.13rem;
+  letter-spacing: 0.5px;
+  background: transparent;
+  border-radius: 0 0 48px 48px;
+  box-shadow: none;
+  transition: background 0.3s cubic-bezier(.4,0,.2,1);
+}
+.unified-header .navbar-brand img {
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 2px 12px #21e6c144;
+  padding: 4px 12px;
+  transition: box-shadow .22s cubic-bezier(.4,0,.2,1), transform .22s cubic-bezier(.4,0,.2,1);
+  height: 48px !important;
+  max-width: 160px;
+  margin-right: 24px;
+  filter: drop-shadow(0 2px 8px #21e6c144);
+}
+.unified-header .navbar-brand img:hover {
+  box-shadow: 0 8px 32px #21e6c199;
+  transform: scale(1.09) rotate(-2deg);
+  filter: drop-shadow(0 4px 16px #21e6c199);
+}
+.unified-header .nav-link,
+.unified-header .btn-contact {
+  font-family: 'Poppins', 'Inter', 'Segoe UI', Arial, sans-serif;
+  font-weight: 700;
+  border-radius: 18px;
+  transition: background 0.22s cubic-bezier(.4,0,.2,1), color 0.22s cubic-bezier(.4,0,.2,1), box-shadow 0.22s cubic-bezier(.4,0,.2,1);
+}
+.unified-header .nav-link {
+  padding: 10px 22px;
+  margin: 0 2px;
+  color: #fff;
+  font-size: 1.13rem;
+  font-weight: 700;
+  letter-spacing: 0.7px;
+  border-radius: 18px;
+  background: transparent;
+  position: relative;
+}
+.unified-header .nav-link.active,
+.unified-header .nav-link:hover,
+.unified-header .nav-link:focus {
+  background: linear-gradient(90deg, #21e6c1 0%, #1e3c72 100%);
+  color: #fff;
+  box-shadow: 0 4px 18px #21e6c144;
+  transform: translateY(-2px) scale(1.04);
+}
+.unified-header .btn-contact {
+  background: linear-gradient(90deg, #21e6c1 0%, #1e3c72 100%);
+  color: #fff;
+  border-radius: 24px;
+  padding: 12px 32px;
+  box-shadow: 0 4px 18px #21e6c133;
+  font-size: 1.13rem;
+  margin-left: 18px;
+  border: none;
+  transition: background 0.22s cubic-bezier(.4,0,.2,1), color 0.22s cubic-bezier(.4,0,.2,1), box-shadow 0.22s cubic-bezier(.4,0,.2,1);
+}
+.unified-header .btn-contact:hover,
+.unified-header .btn-contact:focus {
+  background: linear-gradient(90deg,#1e3c72 0%,#21e6c1 100%);
+  color: #fff;
+  box-shadow: 0 8px 32px #21e6c144;
+  transform: scale(1.06) translateY(-2px);
+}
+
+/* Premium Button */
+.btn, .wa-btn, .popup button, .popup .phone-btn, .popup .email-btn, .popup .close-btn {
+  border-radius: 24px;
+  background: linear-gradient(90deg, #21e6c1 0%, #1e3c72 100%);
+  color: #fff;
+  font-family: 'Poppins', 'Inter', 'Segoe UI', Arial, sans-serif;
+  font-weight: 700;
+  box-shadow: 0 4px 18px #21e6c133;
+  transition: var(--transition);
+  border: none;
+}
+.btn:hover, .wa-btn:hover, .popup button:hover {
+  background: linear-gradient(90deg,#1e3c72 0%,#21e6c1 100%);
+  color: #fff;
+  box-shadow: 0 8px 32px #21e6c144;
+  transform: scale(1.05) translateY(-2px);
+}
+
+/* --- CLIENT LOGO SLIDER SMOOTH & BIGGER --- */
+.client-slider {
+  padding-top: 32px;
+  padding-bottom: 16px;
+  min-height: 140px;
+  overflow: visible;
+}
+.client-slider .client-item {
+  margin: 0 36px 28px 16px;
+  min-height: 120px;
+  border-radius: 28px;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: 0 2px 16px #21e6c111;
+  transition: box-shadow 0.45s cubic-bezier(.4,0,.2,1), background 0.45s cubic-bezier(.4,0,.2,1), transform 0.45s cubic-bezier(.4,0,.2,1), opacity 0.35s cubic-bezier(.4,0,.2,1), filter 0.45s cubic-bezier(.4,0,.2,1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  opacity: 0.92;
+  filter: grayscale(0.15) brightness(0.98);
+  will-change: transform, box-shadow, filter, opacity;
+}
+.client-slider .client-item:hover, .client-slider .client-item:focus {
+  background: #eaf6fa;
+  box-shadow: 0 24px 64px #21e6c144, 0 8px 32px #1e3c7211;
+  transform: translateY(-16px) scale(1.13);
+  z-index: 2;
+  opacity: 1;
+  filter: grayscale(0) brightness(1.08);
+}
+.client-slider .client-item img {
+  max-width: 200px !important;
+  max-height: 90px !important;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  aspect-ratio: unset;
+  background: #fff;
+  display: block;
+  margin: 0 auto;
+  border-radius: 18px;
+  box-shadow: 0 4px 18px #21e6c144;
+  padding: 14px 32px;
+  transition: filter 0.45s cubic-bezier(.4,0,.2,1), opacity 0.35s cubic-bezier(.4,0,.2,1), transform 0.45s cubic-bezier(.4,0,.2,1), box-shadow 0.45s cubic-bezier(.4,0,.2,1);
+  opacity: 0.96;
+  filter: grayscale(0.15) brightness(0.98);
+}
+.client-slider .client-item:hover img, .client-slider .client-item:focus img {
+  transform: scale(1.18) translateY(-10px);
+  box-shadow: 0 16px 48px #21e6c144, 0 4px 18px #1e3c7211;
+  z-index: 2;
+  opacity: 1;
+  filter: grayscale(0) brightness(1.12);
+}
+@media (max-width: 991px) {
+  .client-slider .client-item img {
+    max-width: 120px !important;
+    max-height: 54px !important;
+    padding: 8px 14px;
+  }
+  .client-slider .client-item {
+    min-height: 70px !important;
+    height: 70px !important;
+    padding: 8px 0 !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+}
+@media (max-width: 575px) {
+  .client-slider .client-item img {
+    max-width: 80px !important;
+    max-height: 32px !important;
+    padding: 2px 4px;
+  }
+  .client-slider .client-item {
+    min-height: 40px !important;
+    height: 40px !important;
+    padding: 2px 0 !important;
+  }
+}
+
+/* --- CLIENT SLIDER DOTS SMOOTH --- */
+.owl-dots {
+  text-align: center;
+  margin-top: 10px;
+}
+.owl-dot {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin: 0 4px;
+  background: #eaf6fa;
+  border-radius: 50%;
+  border: 2px solid #21e6c1;
+  transition: background 0.22s, border-color 0.22s;
+}
+.owl-dot.active, .owl-dot:hover {
+  background: #21e6c1;
+  border-color: #1e3c72;
+}
+
+/* Premium Card/Container */
+.section-padding,
+.card,
+.layanan-area,
+.featured-items,
+.popular-categories,
+.closed-contests,
+.pricing-plans,
+.clients,
+.footer-modern,
+.popup,
+#popup-hubungi,
+#popup-email {
+  border-radius: 32px;
+  box-shadow: 0 8px 32px rgba(30,60,114,0.10);
+  background: #fff;
+  transition: var(--transition);
+}
+.card:hover,
+.layanan-item:hover,
+.popular-item:hover,
+.pricing-item:hover,
+.closed-item:hover,
+.section-padding:hover {
+  box-shadow: 0 16px 48px rgba(30,60,114,0.16);
+  transform: translateY(-4px) scale(1.02);
+}
+.layanan-item,
+.popular-item,
+.pricing-item,
+.closed-item {
+  border-radius: 24px;
+  box-shadow: 0 4px 18px #21e6c133;
+  background: #fff;
+  transition: var(--transition);
+}
+.layanan-item:hover,
+.popular-item:hover,
+.pricing-item:hover,
+.closed-item:hover {
+  box-shadow: 0 12px 36px #21e6c133;
+  transform: translateY(-4px) scale(1.04);
+}
+
+/* Premium Badge/Pill */
+span[style*="background:#eaf6fa"] {
+  border-radius: 999px !important;
+  background: linear-gradient(90deg,#21e6c1 0%,#71bdf0 100%) !important;
+  color: #fff !important;
+  font-weight: 700 !important;
+  padding: 8px 22px !important;
+  box-shadow: 0 2px 8px #21e6c144;
+  display: inline-block;
+  font-size: 1.08rem;
+  letter-spacing: 0.5px;
+  margin: 0 2px;
+}
+
+/* Premium Popup/Modal */
+.popup,
+#popup-hubungi,
+#popup-email {
+  border-radius: 28px;
+  box-shadow: 0 8px 32px rgba(30,60,114,0.18);
+  background: #fff;
+  animation: premium-popup-in 0.4s cubic-bezier(.4,0,.2,1);
+  font-family: 'Poppins', 'Inter', 'Segoe UI', Arial, sans-serif;
+  /* Center popup in the middle of the screen */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2000;
+  min-width: 320px;
+  max-width: 94vw;
+  width: 350px;
+  padding: 32px 28px 24px 28px;
+  box-sizing: border-box;
+  text-align: center;
+  display: none;
+}
+#popup-hubungi[style*="block"],
+#popup-email[style*="block"] {
+  display: block;
+}
+.popup h3,
+#popup-hubungi h3,
+#popup-email h3 {
+  margin-bottom: 22px;
+  font-size: 1.25rem;
+  color: #1e3c72;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+.popup button,
+#popup-hubungi button,
+#popup-email button {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 12px 0;
+  border-radius: 18px;
+  font-size: 1.08rem;
+  font-weight: 700;
+  box-shadow: 0 2px 12px #21e6c133;
+  border: none;
+  transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+}
+.popup button:not(.close-btn):hover,
+#popup-hubungi button:not(.close-btn):hover,
+#popup-email button:not(.close-btn):hover {
+  background: linear-gradient(90deg,#1e3c72 0%,#21e6c1 100%);
+  color: #fff;
+  box-shadow: 0 8px 32px #21e6c144;
+}
+.popup .close-btn,
+#popup-hubungi .close-btn,
+#popup-email .close-btn {
+  background: #eaf6fa;
+  color: #1e3c72;
+  font-weight: 700;
+  margin-top: 16px;
+  border-radius: 18px;
+  border: none;
+  box-shadow: 0 2px 8px #21e6c122;
+  transition: background 0.3s, color 0.3s;
+}
+.popup .close-btn:hover,
+#popup-hubungi .close-btn:hover,
+#popup-email .close-btn:hover {
+  background: #21e6c1;
+  color: #fff;
+}
+.popup span,
+#popup-hubungi span,
+#popup-email span {
+  font-size: 1.08rem;
+}
+@media (max-width: 575px) {
+  .popup,
+  #popup-hubungi,
+  #popup-email {
+    min-width: 0;
+    width: 98vw;
+    padding: 18px 6vw 14px 6vw;
+    font-size: 0.97rem;
+  }
+  .popup h3,
+  #popup-hubungi h3,
+  #popup-email h3 {
+    font-size: 1.05rem;
+  }
+  .popup button,
+  #popup-hubungi button,
+  #popup-email button {
+    font-size: 0.97rem;
+    padding: 10px 0;
+    border-radius: 12px;
+  }
+}
+
+/* Premium Typography */
+h1, h2, h3, h4, h5, h6, .section-title, .client-title-premium, .client-title-text {
+  font-family: 'Poppins', 'Inter', 'Segoe UI', Arial, sans-serif;
+  font-weight: 900;
+  letter-spacing: 1.2px;
+  color: #1e3c72;
+}
+.section-title,
+.client-title-premium {
+  font-size: 2.3rem;
+  font-weight: 900;
+  color: #1e3c72;
+  letter-spacing: 1.2px;
+}
+.section-title.center h6,
+.client-title-premium span {
+  color: #21e6c1;
+  font-weight: 700;
+  font-size: 1.13rem;
+  letter-spacing: 2px;
+}
+h5, h4 {
+  font-weight: 800;
+  color: #21e6c1;
+}
+p, li, span, a {
+  font-family: 'Poppins', 'Inter', 'Segoe UI', Arial, sans-serif;
+  font-weight: 500;
+  font-size: 1.07rem;
+  color: #2a5298;
+}
+a {
+  transition: color 0.22s;
+}
+a:hover, a:focus {
+  color: #21e6c1;
+  text-decoration: underline;
+}
+
+/* Premium Footer */
+.footer-modern {
+  background: linear-gradient(135deg, #6ddcff 0%, #1e3c72 100%);
+  border-top-left-radius: 32px;
+  border-top-right-radius: 32px;
+  box-shadow: 0 -4px 24px rgba(30,60,114,0.13);
+  color: #fff;
+  font-family: 'Poppins', 'Inter', 'Segoe UI', Arial, sans-serif;
+}
+.footer-content img {
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 2px 12px #21e6c144;
+  padding: 4px 12px;
+}
+.footer-content h4 {
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: 1.2px;
+  text-shadow: 0 2px 12px #1e3c7244;
+}
+.footer-divider {
+  background: linear-gradient(90deg,#21e6c1 0%,#71bdf0 100%);
+  border-radius: 2px;
+}
+.footer-contact span,
+.footer-contact a {
+  font-family: 'Poppins', 'Inter', 'Segoe UI', Arial, sans-serif;
+  font-weight: 600;
+  color: #21e6c1;
+  font-size: 1.13rem;
+}
+.footer-contact a {
+  color: #fff;
+  border-bottom: 2px solid #21e6c1;
+  transition: color .2s, border-color .2s;
+}
+.footer-contact a:hover {
+  color: #21e6c1;
+  border-color: #fff;
+}
+
+/* Premium Client Slider */
+.client-slider .client-item img {
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 2px 12px #21e6c144;
+  padding: 10px 20px;
+  transition: var(--transition);
+}
+.client-slider .client-item img:hover {
+  box-shadow: 0 8px 32px #21e6c133;
+  background: #f8fcff;
+  transform: scale(1.08) translateY(-4px);
+}
+
+/* Premium Floating WhatsApp Button */
+.floating-wa {
+  position: fixed;
+  right: 32px;
+  bottom: 32px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 62px;
+  height: 62px;
+  background: none;
+  border: none;
+  outline: none;
+  text-decoration: none;
+}
+.floating-wa .wa-circle {
+  width: 62px;
+  height: 62px;
+  background: linear-gradient(135deg, #25d366 0%, #1e3c72 100%);
+  color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 8px 32px rgba(30,60,114,0.18), 0 2px 8px rgba(33,230,193,0.13);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.1rem;
+  border: 3px solid #fff;
+  outline: 3px solid #25d36633;
+  transition: var(--transition);
+}
+.floating-wa:hover .wa-circle,
+.floating-wa:focus .wa-circle {
+  background: linear-gradient(135deg, #1e3c72 0%, #25d366 100%);
+  box-shadow: 0 12px 36px rgba(30,60,114,0.22), 0 4px 16px #25d36644;
+  transform: scale(1.09) translateY(-4px) rotate(-6deg);
+  outline: 4px solid #21e6c199;
+}
+.floating-wa .tooltip {
+  border-radius: 8px;
+  background: #1e3c72;
+  color: #fff;
+  box-shadow: 0 2px 12px #21e6c144;
+  font-family: 'Poppins', 'Inter', 'Segoe UI', Arial, sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: var(--transition);
+  display: none;
+  position: absolute;
+  right: 70px;
+  bottom: 50%;
+  transform: translateY(50%);
+  padding: 7px 18px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+}
+.floating-wa:hover .tooltip, .floating-wa:focus .tooltip {
+  display: block;
+  opacity: 1;
+  right: 80px;
+}
+@media (max-width: 575px) {
+  .floating-wa, .floating-wa .wa-circle {
+    right: 16px;
+    bottom: 16px;
+    width: 52px;
+    height: 52px;
+    font-size: 1.5rem;
+  }
+  .floating-wa .tooltip {
+    font-size: 0.92rem;
+    right: 60px;
+  }
+}
+
+/* Responsive Premium */
+@media (max-width: 991px) {
+  .unified-header,
+  .footer-modern,
+  .section-padding,
+  .popup,
+  #popup-hubungi,
+  #popup-email {
+    border-radius: 18px;
+  }
+  .unified-header .btn-contact {
+    border-radius: 18px;
+    font-size: 1rem;
+    padding: 10px 18px;
+  }
+  .footer-content img {
+    border-radius: 12px;
+    padding: 2px 6px;
+  }
+}
+@media (max-width: 575px) {
+  .unified-header,
+  .footer-modern,
+  .section-padding,
+  .popup,
+  #popup-hubungi,
+  #popup-email {
+    border-radius: 8px;
+  }
+  .unified-header .btn-contact {
+    border-radius: 12px;
+    font-size: 0.95rem;
+    padding: 7px 10px;
+  }
+  .footer-content img {
+    border-radius: 8px;
+    padding: 1px 3px;
+  }
+  .section-title,
+  .client-title-premium {
+    font-size: 1.3rem;
+  }
+}
+
+/* Premium Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  background: #eaf6fa;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #21e6c1 0%, #1e3c72 100%);
+  border-radius: 8px;
+}
+
+/* Dropdown hover for "Layanan" menu on desktop */
+@media (min-width: 992px) {
+  .navbar-nav .dropdown:hover > .dropdown-menu,
+  .navbar-nav .dropdown:focus-within > .dropdown-menu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+    transition: opacity 0.22s cubic-bezier(.4,0,.2,1), transform 0.22s cubic-bezier(.4,0,.2,1);
+  }
+  .navbar-nav .dropdown-menu {
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    min-width: 220px;
+    background: linear-gradient(135deg, #f8fcff 0%, #eaf6fa 100%) !important;
+    box-shadow: 0 8px 32px #21e6c122, 0 2px 8px #1e3c7211 !important;
+    border-radius: 18px !important;
+    padding: 0.5rem 0;
+    margin-top: 10px;
+    transform: translateY(16px);
+    transition: opacity 0.22s cubic-bezier(.4,0,.2,1), transform 0.22s cubic-bezier(.4,0,.2,1);
+    border: none !important;
+  }
+  .navbar-nav .dropdown:hover > .nav-link,
+  .navbar-nav .dropdown:focus-within > .nav-link {
+    background: linear-gradient(90deg,#21e6c1 0%,#1e3c72 100%) !important;
+    color: #fff !important;
+    box-shadow: 0 4px 18px #21e6c144;
+  }
+  .navbar-nav .dropdown-menu .dropdown-item {
+    color: #1e3c72 !important;
+    background: transparent !important;
+    font-weight: 600;
+    padding: 12px 28px;
+    font-size: 1.07rem;
+    border-radius: 10px !important;
+    transition: background 0.18s, color 0.18s;
+    margin: 2px 8px;
+    letter-spacing: 0.2px;
+  }
+  .navbar-nav .dropdown-menu .dropdown-item:hover,
+  .navbar-nav .dropdown-menu .dropdown-item:focus {
+    background: linear-gradient(90deg,#21e6c1 0%,#1e3c72 100%) !important;
+    color: #fff !important;
+  }
+}
+  </style>
+</head>
+<body>
+<!-- ***** Unified Header Start ***** -->
+<header class="unified-header">
+<div class="container">
+<nav class="navbar navbar-expand-lg navbar-dark">
+<a class="navbar-brand" href="index.html">
+  <img alt="PT. Gondola Firdaus Pratama Jaya" src="assets/images/Logo.png" style="height:36px; max-width:120px; width:auto; object-fit:contain;"/>
+</a>
+<button class="navbar-toggler" data-target="#navbarNav" data-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarNav">
+<ul class="navbar-nav mx-auto">
+<li class="nav-item">
+<a class="nav-link" href="index.html">Home</a>
+</li>
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="layananDropdown" role="button">
+  Layanan
+</a>
+<div class="dropdown-menu" aria-labelledby="layananDropdown">
+  <a class="dropdown-item" href="fabrikasi.html">Fabrikasi</a>
+  <a class="dropdown-item" href="sparepart.html">Sparepart</a>
+  <a class="dropdown-item" href="modifikasi.html">Modifikasi</a>
+  <a class="dropdown-item" href="maintenance.html">Maintenance&Service</a>
+</div>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="produk.html">Produk</a>
+</li>
+<li class="nav-item active">
+<a class="nav-link" href="tentang-kami.html">Tentang Kami</a>
+</li>
+</ul>
+<a class="btn btn-contact" href="javascript:void(0)" id="contactBtnPopup">
+  <i class="fa fa-phone"></i> Hubungi Kami
+</a>
+</div>
+</nav>
+</div>
+</header>
+<!-- ***** Unified Header End ***** -->
+
+<!-- ***** Tentang Kami Section Start ***** -->
+<section class="section-padding" style="background:linear-gradient(135deg, #f8fcff 0%, #eaf6fa 100%); border-radius:32px; box-shadow:0 8px 32px rgba(30,60,114,0.08); margin-top:32px;">
+  <div class="container">
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-8 text-center">
+        <h2 class="section-title" style="color:#1e3c72; font-weight:900; letter-spacing:1.2px; font-size:2.3rem;">Tentang Kami</h2>
+        <h4 style="color:#21e6c1; font-weight:800; margin-bottom:18px;">PT. Gondola Firdaus Pratama Jaya</h4>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div style="background:#fff; border-radius:18px; box-shadow:0 2px 16px rgba(30,60,114,0.09); padding:38px 28px; font-size:1.13rem; color:#2a5298; font-weight:500;">
+          <div style="display:flex; flex-wrap:wrap; gap:24px 32px;">
+            <div style="flex:1 1 260px; min-width:220px;">
+              <h5 style="font-weight:800; color:#21e6c1; margin-bottom:12px;">
+                <i class="fa fa-building" style="margin-right:8px;"></i>Siapa Kami?
+              </h5>
+              <ul style="padding-left:18px; margin-bottom:18px;">
+                <li>Produsen gondola lokal dengan pengalaman lebih dari <b>100 unit</b> terpasang.</li>
+                <li>Mengusung brand <b>“GF”</b> yang telah <span style="color:#21e6c1; font-weight:700;">terdaftar &amp; berizin resmi</span>.</li>
+                <li>Berkomitmen pada <span style="color:#1e3c72; font-weight:700;">kualitas, inovasi, dan pelayanan</span>.</li>
+              </ul>
+            </div>
+            <div style="flex:1 1 260px; min-width:220px;">
+              <h5 style="font-weight:800; color:#21e6c1; margin-bottom:12px;">
+                <i class="fa fa-lightbulb" style="margin-right:8px;"></i>Mengapa Memilih Kami?
+              </h5>
+              <ul style="padding-left:18px; margin-bottom:18px;">
+                <li>Produk <b>buatan Indonesia</b> yang mampu bersaing dengan produk impor.</li>
+                <li>Material terbaik &amp; <span style="color:#21e6c1;">rekayasa teknis presisi</span>.</li>
+                <li>Fokus pada <b>keselamatan kerja</b> dan <b>kepuasan pelanggan</b>.</li>
+              </ul>
+            </div>
+          </div>
+          <hr style="margin:32px 0 24px 0; border-top:1.5px dashed #21e6c1;"/>
+          <div class="row mt-2">
+            <div class="col-md-6 mb-3">
+              <div style="background:linear-gradient(135deg,#21e6c1 0%,#71bdf0 100%); border-radius:12px; padding:22px 18px; color:#fff; box-shadow:0 2px 12px #21e6c133;">
+                <h5 style="font-weight:800; letter-spacing:1px; margin-bottom:10px;"><i class="fa fa-bullseye" style="color:#fff; margin-right:8px;"></i>Visi</h5>
+                <div style="font-size:1.08rem; font-weight:500;">
+                  Menjadi perusahaan gondola nasional dengan jaringan luas di seluruh Indonesia dan layanan purna jual (after-sales service) yang unggul &amp; terpercaya.
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <div style="background:linear-gradient(135deg,#1e3c72 0%,#2a5298 100%); border-radius:12px; padding:22px 18px; color:#fff; box-shadow:0 2px 12px #1e3c7211;">
+                <h5 style="font-weight:800; letter-spacing:1px; margin-bottom:10px;"><i class="fa fa-rocket" style="color:#21e6c1; margin-right:8px;"></i>Misi</h5>
+                <ul style="padding-left:18px; font-size:1.08rem; font-weight:500; margin-bottom:0; color:#fff;">
+                  <li style="color:#fff;">Menyediakan solusi gondola terbaik yang efisien, aman, dan sesuai kebutuhan proyek.</li>
+                  <li style="color:#fff;">Terus berinovasi &amp; meningkatkan kualitas produk serta layanan.</li>
+                  <li style="color:#fff;">Membangun kepercayaan dan kepuasan pelanggan sebagai prioritas utama.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <hr style="margin:32px 0 18px 0; border-top:1.5px dashed #21e6c1;"/>
+          <div style="text-align:center; color:#1e3c72; font-weight:700; font-size:1.08rem;">
+            <span style="display:inline-block; background:#eaf6fa; border-radius:8px; padding:10px 18px;">
+              <i class="fa fa-check-circle" style="color:#21e6c1; margin-right:6px;"></i>
+              <span>Kami siap menjadi mitra andalan untuk solusi gondola di setiap proyek Anda!</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section Client Kami -->
+<section class="clients section-padding">
+  <div class="container">
+    <div class="clients-title-premium" style="text-align:center; margin-bottom:36px;">
+      <h2 class="client-title-premium" style="font-weight:900; color:#1e3c72; font-size:2.1rem; letter-spacing:1px;">
+        <span>Dipercaya oleh Gedung-Gedung Ikonik &amp; Perusahaan Ternama di Indonesia</span>
+      </h2>
+      <div class="client-underline-premium" style="width:70px; height:4px; background:linear-gradient(90deg,#21e6c1 0%,#71bdf0 100%); border-radius:2px; margin:14px auto 0 auto;"></div>
+    </div>
+    <div class="client-slider owl-carousel">
+      <div class="client-item"><img alt="Client 1" src="assets/logoclient/pp.png"/></div>
+      <div class="client-item"><img alt="Client 2" src="assets/logoclient/pbs.jpg"/></div>
+      <div class="client-item"><img alt="Client 3" src="assets/logoclient/mulia.jpg"/></div>
+      <div class="client-item"><img alt="Client 4" src="assets/logoclient/kempinski.jpg"/></div>
+      <div class="client-item"><img alt="Client 5" src="assets/logoclient/polri.png"/></div>
+      <div class="client-item"><img alt="Client 6" src="assets/logoclient/uresidences.jpg"/></div>
+      <div class="client-item"><img alt="Client 7" src="assets/logoclient/bankmega.png"/></div>
+      <div class="client-item"><img alt="Client 8" src="assets/logoclient/inalum.png"/></div>
+      <div class="client-item"><img alt="Client 9" src="assets/logoclient/olive.jpg"/></div>
+      <div class="client-item"><img alt="Client 10" src="assets/logoclient/trakindo.jpg"/></div>
+      <div class="client-item"><img alt="Client 11" src="assets/logoclient/xlsmart.png"/></div>
+      <div class="client-item"><img alt="Client 12" src="assets/logoclient/provices.png"/></div>
+      <div class="client-item"><img alt="Client 13" src="assets/logoclient/nusaraya.jpg"/></div>
+      <div class="client-item"><img alt="Client 14" src="assets/logoclient/montsera.png"/></div>
+      <div class="client-item"><img alt="Client 15" src="assets/logoclient/bks.jpg"/></div>
+      <div class="client-item"><img alt="Client 16" src="assets/logoclient/wika.png"/></div>
+      <div class="client-item"><img alt="Client 17" src="assets/logoclient/pakkodian.png"/></div>
+    </div>
+  </div>
+</section>
+
+<!-- OwlCarousel client slider script (jika belum ada) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script>
+$(document).ready(function(){
+  $('.client-slider').owlCarousel({
+    loop:true,
+    margin:5, // lebih rapat antar logo
+    nav:false,
+    autoplay:true,
+    autoplayTimeout:1800, // lebih cepat
+    smartSpeed:900, // transisi lebih smooth
+    responsive:{
+      0:{ items:2 },
+      600:{ items:3 },
+      1000:{ items:5 }
+    }
+  });
+});
+</script>
+
+<!-- Tambahkan footer modern di sini, sebelum tombol WhatsApp mengambang dan sebelum script -->
+<footer class="footer-modern">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-12">
+        <div class="footer-content text-center">
+          <img alt="Logo Gondola" src="assets/images/Logo.png" style="max-height: 64px; max-width: 64px; margin-bottom: 18px; filter: drop-shadow(0 2px 12px #21e6c155);"/>
+          <h4 style="color:#fff; font-weight:800; letter-spacing:1.2px; margin-bottom:10px; text-shadow:0 2px 12px #1e3c7244;">
+            PT. Gondola Firdaus Pratama Jaya
+          </h4>
+          <div class="footer-divider" style="width:60px; height:4px; background:linear-gradient(90deg,#21e6c1 0%,#71bdf0 100%); border-radius:2px; margin:0 auto 18px auto;"></div>
+          <p style="color:#eaf6fa; font-size:1.08rem; font-weight:500; margin-bottom:18px; text-shadow:0 1px 8px #1e3c7222;">
+            Spesialis Sistem Gondola Profesional untuk Proyek Gedung Tinggi
+          </p>
+          <div class="footer-contact d-flex flex-column flex-md-row justify-content-center align-items-center gap-3" style="gap:18px; margin-bottom:18px;">
+            <span style="color:#21e6c1; font-size:1.13rem; font-weight:600; display:flex; align-items:center; gap:7px;">
+              <i class="fa fa-map-marker-alt" style="color:#71bdf0;"></i> Jl. Raya Pondok Petir No.118 RT 002/019 Bojongsari - Depok
+            </span>
+            <span class="footer-dot d-none d-md-inline" style="color:#21e6c1; font-size:1.5rem; margin:0 10px;">•</span>
+            <span style="color:#21e6c1; font-size:1.13rem; font-weight:600; display:flex; align-items:center; gap:7px;">
+              <i class="fab fa-whatsapp" style="color:#25d366;"></i> <a href="https://wa.me/6281220200690" style="color:#fff; font-weight:700; text-decoration:none; border-bottom:2px solid #25d366; transition:color .2s;">0812 2020 0690</a>
+            </span>
+            <span class="footer-dot d-none d-md-inline" style="color:#21e6c1; font-size:1.5rem; margin:0 10px;">•</span>
+            <span style="color:#21e6c1; font-size:1.13rem; font-weight:600; display:flex; align-items:center; gap:7px;">
+              <i class="fa fa-envelope" style="color:#71bdf0;"></i> <a href="mailto:gfgondola86@gmail.com" style="color:#fff; font-weight:700; text-decoration:none; border-bottom:2px solid #71bdf0; transition:color .2s;">gfgondola86@gmail.com</a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="copyright text-center" style="margin-top:18px; color:#eaf6fa; font-size:1rem; letter-spacing:0.5px;">
+          <span style="opacity:0.7;">Copyright © 2025 PT. Gondola Firdaus Pratama Jaya. All rights reserved.</span>
+        </div>
+        <div class="text-center" style="margin-top:6px; font-size:0.97rem; color:#eaf6fa;">
+          Website by
+          <a href="https://www.facebook.com/share/1EWmuyzgcc/" target="_blank" style="color:#21e6c1; font-weight:700; text-decoration:underline;">
+            MCA
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp Button -->
+<a class="floating-wa" href="https://wa.me/6281220200690" target="_blank" title="Hubungi Kami via WhatsApp" tabindex="0">
+  <span class="wa-circle">
+    <i class="fab fa-whatsapp"></i>
+  </span>
+  <span class="tooltip">Chat via WhatsApp</span>
+</a>
+
+<!-- Popup Hubungi Kami & Email -->
+<div class="popupContainer" id="modal" style="display:none;">
+  <div class="popupHeader">
+    <span class="header_title">Hubungi Kami</span>
+    <span class="modal_close"><i class="fa fa-times"></i></span>
+  </div>
+  <section class="popupBody">
+    <div>
+      <p>Silakan hubungi kami untuk konsultasi, pemesanan, atau informasi lebih lanjut:</p>
+      <a class="wa-btn" href="https://wa.me/6281220200690" target="_blank"><i class="fab fa-whatsapp"></i> 0812 2020 0690</a>
+      <br/><br/>
+      <a href="mailto:gfgondola86@gmail.com"><i class="fa fa-envelope"></i> gfgondola86@gmail.com</a>
+      <br/><br/>
+      <p><i class="fa fa-map-marker-alt"></i> Alamat: Jl. Raya Pondok Petir No.118 RT 002/019 Bojongsari - Depok</p>
+    </div>
+  </section>
+</div>
+<div class="overlay" id="overlay-hubungi" onclick="closePopupHubungi()"></div>
+<div class="popup" id="popup-hubungi">
+  <h3>Pilih Metode Kontak</h3>
+  <button type="button" class="phone-btn" onclick="callPhone()">
+    Hubungi via Telepon<br>
+    <span style="font-size:1.1em;font-weight:600;">081220200690</span>
+  </button>
+  <button type="button" class="email-btn" onclick="openEmailPopup()">
+    Hubungi via Email<br>
+    <span style="font-size:1.1em;font-weight:600;">gfgondola86@gmail.com</span>
+  </button>
+  <button type="button" class="close-btn" onclick="closePopupHubungi()">Tutup</button>
+</div>
+<div class="overlay" id="overlay-email" onclick="closeEmailPopup()" style="display:none;"></div>
+<div class="popup" id="popup-email" style="display:none;">
+  <h3>Pilih Aplikasi Email</h3>
+  <button type="button" onclick="window.open('mailto:gfgondola86@gmail.com','_self');closeEmailPopup();">Default Email</button>
+  <button type="button" onclick="window.open('https://mail.google.com/mail/?view=cm&fs=1&to=gfgondola86@gmail.com','_blank');closeEmailPopup();">Gmail Web</button>
+  <button type="button" onclick="window.open('https://compose.mail.yahoo.com/?to=gfgondola86@gmail.com','_blank');closeEmailPopup();">Yahoo Mail</button>
+  <button type="button" onclick="window.open('https://outlook.live.com/mail/0/deeplink/compose?to=gfgondola86@gmail.com','_blank');closeEmailPopup();">Outlook Web</button>
+  <button type="button" class="close-btn" onclick="closeEmailPopup()">Batal</button>
+</div>
+
+<script>
+// Popup Hubungi Kami logic
+function openPopupHubungi() {
+  document.getElementById('popup-hubungi').style.display = 'block';
+  document.getElementById('overlay-hubungi').style.display = 'block';
+}
+function closePopupHubungi() {
+  document.getElementById('popup-hubungi').style.display = 'none';
+  document.getElementById('overlay-hubungi').style.display = 'none';
+}
+function callPhone() {
+  window.open('tel:081220200690', '_self');
+  closePopupHubungi();
+}
+function openEmailPopup() {
+  document.getElementById('popup-email').style.display = 'block';
+  document.getElementById('overlay-email').style.display = 'block';
+}
+function closeEmailPopup() {
+  document.getElementById('popup-email').style.display = 'none';
+  document.getElementById('overlay-email').style.display = 'none';
+}
+document.addEventListener('DOMContentLoaded', function() {
+  var btn = document.getElementById('contactBtnPopup');
+  if (btn) btn.onclick = openPopupHubungi;
+});
+</script>
+</body>
+</html>
