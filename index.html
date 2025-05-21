@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=2, viewport-fit=cover"/>
   <meta content="PT. Gondola Firdaus Pratama Jaya - Spesialis Gondola Profesional untuk Proyek Konstruksi" name="description"/>
   <meta name="description" content="Professional services company offering top-notch solutions.">
   <meta name="keywords" content="professional services, business solutions, consulting">
@@ -1010,6 +1010,23 @@ body, .unified-header, .footer-modern, .footer-content, .popup, .popupContainer,
   .main-banner .buttons {
     margin-bottom: 0 !important;
   }
+}
+
+/* Perbaikan untuk banner text responsif */
+.main-banner .header-text h1 {
+  font-size: clamp(1.8rem, 5vw, 3.2rem) !important;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+.main-banner .header-text span {
+  display: inline-block;
+  font-size: clamp(1.2rem, 3vw, 2.1rem) !important;
+}
+.main-banner .header-text p {
+  font-size: clamp(0.9rem, 2.5vw, 1.18rem) !important;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
 }
   </style>
 </head>
@@ -2104,3 +2121,78 @@ html {
   }
 }
 </style>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Mobile menu handling
+  const navbarCollapse = document.getElementById('navbarNav');
+  const navbarToggler = document.querySelector('.navbar-toggler');
+
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      if (document.querySelector(this.getAttribute('href'))) {
+        e.preventDefault();
+        if (window.innerWidth < 992 && navbarToggler && navbarCollapse.classList.contains('show')) {
+          navbarToggler.click();
+        }
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+
+  // Close mobile menu when clicking outside
+  document.addEventListener('click', function(e) {
+    if (window.innerWidth < 992 && navbarCollapse && navbarCollapse.classList.contains('show')) {
+      if (!e.target.closest('.navbar') && !e.target.closest('.navbar-toggler')) {
+        navbarToggler.click();
+      }
+    }
+  });
+
+  // Initialize carousels with stability fixes
+  if (typeof $ !== 'undefined') {
+    $('.owl-carousel').owlCarousel({
+      loop: true,
+      margin: 20,
+      nav: false,
+      dots: true,
+      autoplay: true,
+      autoplayTimeout: 4000,
+      autoplayHoverPause: true,
+      smartSpeed: 800,
+      responsiveRefreshRate: 100,
+      touchDrag: true,
+      mouseDrag: false,
+      responsive:{
+        0: { items: 1 },
+        600: { items: 2 },
+        1000: { items: 3 }
+      }
+    });
+
+    // Prevent page scroll when carousel is dragged
+    $('.owl-carousel').on('touchstart', function(e) {
+      const startX = e.touches[0].pageX;
+      $(this).on('touchmove', function(e) {
+        const moveX = e.touches[0].pageX;
+        if (Math.abs(moveX - startX) > 5) {
+          e.preventDefault();
+        }
+      });
+      $(this).on('touchend', function() {
+        $(this).off('touchmove touchend');
+      });
+    });
+  }
+
+  // Force layout stabilization on iOS
+  if (navigator.userAgent.match(/iPhone|iPad|iPod/i)) {
+    document.body.style.webkitTransform = 'translateZ(0)';
+    document.body.style.webkitBackfaceVisibility = 'hidden';
+    document.body.style.webkitPerspective = '1000';
+  }
+});
+</script>
+</html>
