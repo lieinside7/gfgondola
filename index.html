@@ -928,78 +928,54 @@ body, .unified-header, .footer-modern, .footer-content, .popup, .popupContainer,
     letter-spacing: 1px !important;
   }
 }
-    /* === CUSTOM DROPDOWN HOVER & ANIMATION FOR "Layanan" MENU === */
-@media (min-width: 992px) {
-  .navbar-nav .dropdown:hover > .dropdown-menu,
-  .navbar-nav .dropdown:focus-within > .dropdown-menu {
+/* Responsive: Card layanan full width di HP */
+@media (max-width: 575.98px) {
+  .layanan-area .row.layanan-grid > [class*="col-"] {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-bottom: 14px;
+  }
+  .layanan-item {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    border-radius: 8px !important;
+    box-sizing: border-box;
+    padding: 10px 4px !important;
+  }
+  .layanan-item .card-img-top,
+  .layanan-item img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
     display: block;
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-    transform: translateY(0);
-    transition: opacity 0.22s cubic-bezier(.4,0,.2,1), transform 0.22s cubic-bezier(.4,0,.2,1);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 6px !important;
+    border-radius: 8px !important;
   }
-  .navbar-nav .dropdown-menu {
-    display: block;
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-    min-width: 220px;
-    background: linear-gradient(135deg, #f8fcff 0%, #eaf6fa 100%) !important;
-    box-shadow: 0 8px 32px #21e6c122, 0 2px 8px #1e3c7211 !important;
-    border-radius: 18px !important;
-    padding: 0.5rem 0;
-    margin-top: 10px;
-    transform: translateY(16px);
-    transition: opacity 0.22s cubic-bezier(.4,0,.2,1), transform 0.22s cubic-bezier(.4,0,.2,1);
-    border: none !important;
+  .layanan-item .layanan-icon img {
+    width: 40px !important;
+    height: 40px !important;
+    min-width: 40px !important;
+    min-height: 40px !important;
+    max-width: 40px !important;
+    max-height: 40px !important;
+    padding: 2px !important;
   }
-  .navbar-nav .dropdown:hover > .nav-link,
-  .navbar-nav .dropdown:focus-within > .nav-link {
-    background: linear-gradient(90deg,#21e6c1 0%,#1e3c72 100%) !important;
-    color: #fff !important;
-    box-shadow: 0 4px 18px #21e6c144;
+  .layanan-item h5 {
+    font-size: 1.08rem !important;
   }
-  .navbar-nav .dropdown-menu .dropdown-item {
-    color: #1e3c72 !important;
-    background: transparent !important;
-    font-weight: 600;
-    padding: 12px 28px;
-    font-size: 1.07rem;
-    border-radius: 10px !important;
-    transition: background 0.18s, color 0.18s;
-    margin: 2px 8px;
-    letter-spacing: 0.2px;
+  .layanan-item .category,
+  .layanan-item .Sukses {
+    font-size: 0.95rem !important;
+    padding: 5px 12px !important;
+    margin-bottom: 4px !important;
   }
-  .navbar-nav .dropdown-menu .dropdown-item:hover,
-  .navbar-nav .dropdown-menu .dropdown-item:focus {
-    background: linear-gradient(90deg,#21e6c1 0%,#1e3c72 100%) !important;
-    color: #fff !important;
-  }
-}
-
-/* Mobile: fallback to Bootstrap click */
-@media (max-width: 991.98px) {
-  .navbar-nav .dropdown-menu {
-    background: #fff !important;
-    box-shadow: 0 8px 32px rgba(30,60,114,0.13), 0 2px 8px #1e3c7211;
-    border-radius: 16px;
-    padding: 0.5rem 0;
-    border: none;
-    min-width: 180px;
-  }
-  .navbar-nav .dropdown-menu .dropdown-item {
-    color: #333333 !important;
-    font-weight: 600;
-    padding: 12px 22px;
-    font-size: 1.07rem;
-    border-radius: 8px;
-    margin: 2px 8px;
-  }
-  .navbar-nav .dropdown-menu .dropdown-item:hover,
-  .navbar-nav .dropdown-menu .dropdown-item:focus {
-    background: #f2faff !important;
-    color: var(--primary-color) !important;
+  .layanan-item .border-button {
+    margin-top: 8px !important;
+    margin-bottom: 4px !important;
   }
 }
   </style>
@@ -1154,7 +1130,32 @@ body, .unified-header, .footer-modern, .footer-content, .popup, .popupContainer,
         <p class="section-desc" style="color:#2a5298; font-size:1.18rem; font-weight:500;">Kami menyediakan layanan lengkap mulai dari pembuatan, pemasangan, perawatan, hingga modifikasi gondola untuk berbagai kebutuhan proyek gedung tinggi.</p>
       </div>
     </div>
-    <!-- KOTAK-KOTAK LAYANAN DIHILANGKAN -->
+    <div class="row justify-content-center align-items-stretch layanan-grid">
+      <!-- FABRIKASI -->
+      <div class="col-lg-3 col-md-6 col-12 mb-4 d-flex">
+        <div class="layanan-item w-100 d-flex flex-column align-items-center justify-content-between">
+          <!-- ...existing code... -->
+        </div>
+      </div>
+      <!-- MODIFIKASI -->
+      <div class="col-lg-3 col-md-6 col-12 mb-4 d-flex">
+        <div class="layanan-item w-100 d-flex flex-column align-items-center justify-content-between">
+          <!-- ...existing code... -->
+        </div>
+      </div>
+      <!-- MAINTENANCE -->
+      <div class="col-lg-3 col-md-6 col-12 mb-4 d-flex">
+        <div class="layanan-item w-100 d-flex flex-column align-items-center justify-content-between">
+          <!-- ...existing code... -->
+        </div>
+      </div>
+      <!-- SPAREPART -->
+      <div class="col-lg-3 col-md-6 col-12 mb-4 d-flex">
+        <div class="layanan-item w-100 d-flex flex-column align-items-center justify-content-between">
+          <!-- ...existing code... -->
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 <section class="popular-categories section-padding">
