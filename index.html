@@ -1275,7 +1275,7 @@ body, .unified-header, .footer-modern, .footer-content, .popup, .popupContainer,
   <div class="item">
   <div class="closed-item">
   <div class="thumb">
-  <img alt="Gedung 30 Lantai Jakarta" src="assets/images/closed-01.jpg"/>
+  <img alt="Gedung 30 Lantai Jakarta" src="assets/fotomaintenance/keranjangJajang.jpg"/>
   <span class="winner"><em>Klien:</em> PT. Bangun Jaya</span>
   <span class="price"><em>Layanan:</em> Fabrikasi Gondola Baru</span>
   </div>
@@ -1351,52 +1351,37 @@ body, .unified-header, .footer-modern, .footer-content, .popup, .popupContainer,
         </div>
       </div>
       <div class="col-lg-12 mb-4">
-        <!-- Carousel Baris Atas -->
-        <div class="owl-features owl-carousel owl-carousel-atas">
-          <div class="item">
-            <div class="thumb">
-              <img alt="Fabrikasi Gondola Baru" src="assets/images/featured-01.jpg"/>
-              <div class="hover-effect">
-                <div class="content">
-                  <h4>Fabrikasi Gondola Baru <i class="fa fa-check-circle"></i></h4>
-                  <ul>
-                    <li><span>Klien:</span> PT. Bringin Karya Sejahtera</li>
-                    <li><span>Lokasi:</span> Jaya Pura Papua</li>
-                    <li><span>Layanan:</span> Perancangan dan pembuatan sistem gondola baru dengan spesifikasi khusus untuk gedung tinggi.</li>
-                  </ul>
+        <!-- Carousel Portofolio dengan struktur baru -->
+        <div class="portfolio-carousel-container" style="overflow: hidden;">
+          <div class="owl-carousel portfolio-carousel">
+            <div class="item">
+              <div class="portfolio-item">
+                <img src="assets/images/featured-01.jpg" alt="Fabrikasi Gondola Baru" width="400" height="300" loading="lazy" class="img-fluid">
+                <div class="portfolio-overlay">
+                  <h4>Fabrikasi Gondola Baru</h4>
+                  <p>Perancangan dan pembuatan sistem gondola baru dengan spesifikasi khusus untuk gedung tinggi.</p>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="item">
-            <div class="thumb">
-              <img alt="Modifikasi Gondola Eksisting" src="assets/images/featured-02.jpg"/>
-              <div class="hover-effect">
-                <div class="content">
-                  <h4>Modifikasi Gondola Eksisting <i class="fa fa-check-circle"></i></h4>
-                  <ul>
-                    <li><span>Klien:</span> Apartemen Mewah</li>
-                    <li><span>Lokasi:</span> Surabaya</li>
-                    <li><span>Layanan:</span> Penyesuaian kapasitas dan peningkatan sistem keamanan pada gondola existing.</li>
-                  </ul>
+            <div class="item">
+              <div class="portfolio-item">
+                <img src="assets/images/featured-02.jpg" alt="Modifikasi Gondola Eksisting" width="400" height="300" loading="lazy" class="img-fluid">
+                <div class="portfolio-overlay">
+                  <h4>Modifikasi Gondola Eksisting</h4>
+                  <p>Penyesuaian kapasitas dan peningkatan sistem keamanan pada gondola existing.</p>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="item">
-            <div class="thumb">
-              <img alt="Maintenance &amp; Service" src="assets/images/featured-03.jpg"/>
-              <div class="hover-effect">
-                <div class="content">
-                  <h4>Maintenance &amp; Service <i class="fa fa-check-circle"></i></h4>
-                  <ul>
-                    <li><span>Klien:</span> Gedung Perkantoran</li>
-                    <li><span>Lokasi:</span> Bandung</li>
-                    <li><span>Layanan:</span> Pemeliharaan berkala dan perbaikan menyeluruh sistem gondola.</li>
-                  </ul>
+            <div class="item">
+              <div class="portfolio-item">
+                <img src="assets/images/featured-03.jpg" alt="Maintenance &amp; Service" width="400" height="300" loading="lazy" class="img-fluid">
+                <div class="portfolio-overlay">
+                  <h4>Maintenance &amp; Service</h4>
+                  <p>Pemeliharaan berkala dan perbaikan menyeluruh sistem gondola.</p>
                 </div>
               </div>
             </div>
+            <!-- ...tambahkan item lain jika perlu... -->
           </div>
         </div>
       </div>
@@ -1404,34 +1389,166 @@ body, .unified-header, .footer-modern, .footer-content, .popup, .popupContainer,
 </section>
 <script>
 $(document).ready(function(){
-  $('.owl-carousel-atas').owlCarousel({
-    loop:true,
-    margin:30,
-    nav:false,
-    autoplay:true,
-    autoplayTimeout:2500,
-    smartSpeed:700,
+  $('.portfolio-carousel').owlCarousel({
+    loop: true,
+    margin: 20,
+    nav: false,
+    dots: true,
+    autoplay: true,
+    autoplayTimeout: 4000,
+    autoplayHoverPause: true,
+    smartSpeed: 600,
+    responsiveRefreshRate: 200,
+    touchDrag: true,
+    mouseDrag: false,
     responsive:{
-      0:{ items:1 },
-      600:{ items:2 },
-      1000:{ items:3 }
+      0: { items: 1, stagePadding: 20 },
+      600: { items: 2, stagePadding: 30 },
+      1000: { items: 3, stagePadding: 40 }
+    },
+    onInitialize: function() {
+      $('.portfolio-carousel .owl-item').css({'display':'flex','justify-content':'center'});
+    },
+    onTranslate: function() {
+      $('.portfolio-carousel .owl-item').css('transform', 'scale(0.95)');
+      $('.portfolio-carousel .owl-item.active').css('transform', 'scale(1)');
     }
   });
-  $('.owl-carousel-bawah').owlCarousel({
-    loop:true,
-    margin:30,
-    nav:false,
-    autoplay:true,
-    autoplayTimeout:3200,
-    smartSpeed:700,
-    responsive:{
-      0:{ items:1 },
-      600:{ items:2 },
-      1000:{ items:3 }
-    }
+
+  // Nonaktifkan scroll halaman saat menggeser carousel (mobile)
+  $('.portfolio-carousel').on('touchstart', function(e) {
+    const carousel = $(this);
+    const startX = e.touches[0].pageX;
+    carousel.on('touchmove', function(e) {
+      const moveX = e.touches[0].pageX;
+      if (Math.abs(moveX - startX) > 5) {
+        e.preventDefault();
+      }
+    });
+    carousel.on('touchend', function() {
+      carousel.off('touchmove touchend');
+    });
   });
 });
 </script>
+<style>
+/* Stabilisasi Carousel Portofolio */
+.portfolio-carousel-container {
+  position: relative;
+  padding: 0 15px;
+}
+.portfolio-carousel {
+  position: relative;
+  z-index: 1;
+}
+.portfolio-carousel .owl-stage-outer {
+  overflow: visible !important;
+  padding: 20px 0;
+  margin: -20px 0;
+}
+.portfolio-carousel .owl-item {
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  will-change: transform;
+  transition: all 0.3s ease;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+.portfolio-item {
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(30,60,114,0.1);
+  transition: all 0.3s ease;
+  height: 300px;
+  width: 100%;
+  max-width: 400px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+}
+.portfolio-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  display: block;
+}
+.portfolio-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(30,60,114,0.9) 0%, transparent 100%);
+  color: white;
+  padding: 20px;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+.portfolio-item:hover .portfolio-overlay {
+  transform: translateY(0);
+}
+@media (max-width: 767px) {
+  .portfolio-carousel .owl-stage-outer {
+    overflow: hidden !important;
+  }
+  .portfolio-item {
+    height: 250px;
+    max-width: 100%;
+  }
+}
+</style>
+<script>
+// Fix untuk scroll tidak stabil pada carousel portofolio
+let isScrolling = false;
+window.addEventListener('scroll', function() {
+  if (!isScrolling) {
+    window.requestAnimationFrame(function() {
+      const carousel = document.querySelector('.portfolio-carousel');
+      if (carousel) {
+        const carouselRect = carousel.getBoundingClientRect();
+        if (carouselRect.top < window.innerHeight && carouselRect.bottom > 0) {
+          isScrolling = true;
+          setTimeout(() => { isScrolling = false; }, 100);
+        }
+      }
+    });
+  }
+}, { passive: true });
+
+// Fix untuk iOS: mencegah scroll saat swipe carousel
+document.addEventListener('touchmove', function(e) {
+  const carousel = document.querySelector('.portfolio-carousel');
+  if (carousel && carousel.contains(e.target)) {
+    e.preventDefault();
+  }
+}, { passive: false });
+</script>
+<style>
+html {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+/* Fix untuk iOS */
+@supports (-webkit-touch-callout: none) {
+  body {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  .container, .container-fluid {
+    height: 100%;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+</style>
 <section class="pricing-plans section-padding">
 <div class="container">
 <div class="row">
