@@ -55,10 +55,6 @@ footer {
   box-shadow: 0 8px 32px rgba(30,60,114,0.13), 0 2px 8px #21e6c122;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  min-height: 72px;
   font-family: 'Poppins', 'Inter', 'Segoe UI', Arial, sans-serif;
 }
 .unified-header .navbar {
@@ -209,6 +205,129 @@ footer {
     padding: 7px 10px !important;
     min-width: 0 !important;
     max-width: 120px !important;
+  }
+}
+@media (max-width: 991.98px) {
+  .unified-header .btn-contact {
+    width: 100% !important;
+    display: block !important;
+    margin-left: 0 !important;
+    margin-top: 14px !important;
+    max-width: 100% !important;
+    text-align: center !important;
+  }
+}
+@media (min-width: 992px) {
+  .unified-header .btn-contact {
+    margin-left: 24px !important;
+    margin-top: 0 !important;
+    width: auto !important;
+    display: inline-block !important;
+    text-align: right !important;
+  }
+}
+
+/* HEADER: sticky hanya di desktop */
+@media (min-width: 992px) {
+  .unified-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+}
+@media (max-width: 991.98px) {
+  .unified-header {
+    position: static !important;
+    box-shadow: 0 4px 16px rgba(30,60,114,0.10);
+    border-radius: 0 0 18px 18px;
+  }
+  .unified-header .navbar {
+    min-height: 54px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+  .unified-header .navbar-nav {
+    gap: 0;
+  }
+  .unified-header .nav-link {
+    font-size: 1.18rem !important;
+    padding: 18px 18px !important;
+    border-radius: 12px !important;
+    margin-bottom: 6px;
+    text-align: left;
+  }
+  .unified-header .btn-contact {
+    font-size: 1.13rem !important;
+    padding: 16px 0 !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    border-radius: 14px !important;
+    margin-top: 12px !important;
+    margin-bottom: 8px !important;
+    text-align: center !important;
+    display: block !important;
+  }
+  .navbar-collapse {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    padding: 18px 10px 10px 10px;
+    border-radius: 0 0 18px 18px;
+    box-shadow: 0 4px 16px #1e3c7211;
+  }
+  .navbar-toggler {
+    font-size: 1.6rem;
+    padding: 8px 14px;
+    border-radius: 10px;
+  }
+}
+
+/* Hamburger menu: menu tetap terbuka saat scroll, tidak auto-close */
+@media (max-width: 991.98px) {
+  body {
+    overscroll-behavior-y: contain;
+  }
+  .navbar-collapse {
+    transition: none !important;
+  }
+}
+
+/* Perbesar area klik hamburger */
+.navbar-toggler {
+  min-width: 48px;
+  min-height: 48px;
+  border-radius: 12px;
+  border: none;
+  background: #21e6c1;
+  color: #fff;
+  box-shadow: 0 2px 8px #21e6c133;
+  transition: background .18s;
+}
+.navbar-toggler:focus, .navbar-toggler:hover {
+  background: #1e3c72;
+  color: #fff;
+}
+
+/* Perbesar icon hamburger */
+.navbar-toggler-icon {
+  width: 2em;
+  height: 2em;
+}
+
+/* Pastikan menu mobile tidak kecil */
+@media (max-width: 575px) {
+  .unified-header .navbar-nav .nav-link {
+    font-size: 1.13rem !important;
+    padding: 16px 12px !important;
+    border-radius: 10px !important;
+  }
+  .unified-header .btn-contact {
+    font-size: 1.08rem !important;
+    padding: 13px 0 !important;
+    border-radius: 10px !important;
+  }
+  .navbar-collapse {
+    padding: 10px 4px 8px 4px;
+    border-radius: 0 0 8px 8px;
   }
 }
 
@@ -919,7 +1038,7 @@ body, .unified-header, .footer-modern, .footer-content, .popup, .popupContainer,
 <a class="nav-link" href="tentang-kami.html">Tentang Kami</a>
 </li>
 </ul>
-<a class="btn btn-contact" href="javascript:void(0)" id="contactBtnPopup">
+<a class="btn btn-contact ms-lg-3 ms-0 mt-3 mt-lg-0 w-100 w-lg-auto d-block" href="javascript:void(0)" id="contactBtnPopup">
   <i class="fa fa-phone"></i> Hubungi Kami
 </a>
 </div>
@@ -1035,38 +1154,190 @@ body, .unified-header, .footer-modern, .footer-content, .popup, .popupContainer,
         <p class="section-desc" style="color:#2a5298; font-size:1.18rem; font-weight:500;">Kami menyediakan layanan lengkap mulai dari pembuatan, pemasangan, perawatan, hingga modifikasi gondola untuk berbagai kebutuhan proyek gedung tinggi.</p>
       </div>
     </div>
-    <div class="row layanan-grid justify-content-center">
-      <div class="col-md-6 col-lg-3 mb-4">
-        <div class="layanan-item text-center" style="background:#fff; border-radius:18px; box-shadow:0 2px 16px rgba(30,60,114,0.09); padding:38px 20px; transition:box-shadow .3s;">
-          <div class="layanan-icon mb-3" style="color:#21e6c1; font-size:2.7rem;"><i class="fas fa-cogs"></i></div>
-          <h5 style="color:#1e3c72; font-weight:800; font-size:1.18rem;">Pembuatan Gondola</h5>
-          <p style="color:#2a5298; font-size:1.05rem; font-weight:500;">Desain &amp; fabrikasi gondola custom sesuai kebutuhan proyek.</p>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-3 mb-4">
-        <div class="layanan-item text-center" style="background:#fff; border-radius:18px; box-shadow:0 2px 16px rgba(30,60,114,0.09); padding:38px 20px; transition:box-shadow .3s;">
-          <div class="layanan-icon mb-3" style="color:#21e6c1; font-size:2.7rem;"><i class="fas fa-tools"></i></div>
-          <h5 style="color:#1e3c72; font-weight:900; font-size:1.18rem;">Instalasi Gondola</h5>
-          <p style="color:#2a5298; font-size:1.05rem; font-weight:700;">Pemasangan gondola dengan standar keselamatan tinggi.</p>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-3 mb-4">
-        <div class="layanan-item text-center" style="background:#fff; border-radius:18px; box-shadow:0 2px 16px rgba(30,60,114,0.09); padding:38px 20px; transition:box-shadow .3s;">
-          <div class="layanan-icon mb-3" style="color:#21e6c1; font-size:2.7rem;"><i class="fas fa-wrench"></i></div>
-          <h5 style="color:#1e3c72; font-weight:800; font-size:1.18rem;">Perawatan &amp; Service</h5>
-          <p style="color:#2a5298; font-size:1.05rem; font-weight:500;">Perawatan berkala, perbaikan, dan penggantian sparepart gondola.</p>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-3 mb-4">
-        <div class="layanan-item text-center" style="background:#fff; border-radius:18px; box-shadow:0 2px 16px rgba(30,60,114,0.09); padding:38px 20px; transition:box-shadow .3s;">
-          <div class="layanan-icon mb-3" style="color:#21e6c1; font-size:2.7rem;"><i class="fas fa-lightbulb"></i></div>
-          <h5 style="color:#1e3c72; font-weight:800; font-size:1.18rem;">Modifikasi Sistem</h5>
-          <p style="color:#2a5298; font-size:1.05rem; font-weight:500;">Modifikasi &amp; upgrade sistem gondola sesuai kebutuhan proyek.</p>
-        </div>
-      </div>
-    </div>
+    <!-- KOTAK-KOTAK LAYANAN DIHILANGKAN -->
   </div>
 </section>
+<section class="popular-categories section-padding">
+  <div class="container">
+  <div class="row">
+  <div class="col-lg-6">
+  <div class="section-title">
+  <h6>Layanan Kami</h6>
+  <h2>Solusi <span class="text-primary">Terintegrasi</span></h2>
+  </div>
+  </div>
+  <div class="col-lg-6">
+  <div class="main-button">
+  <a href="kosong.html">Lihat Semua Layanan</a>
+  </div>
+  </div>
+  </div>
+  <div class="row">
+  <div class="col-lg-3 col-md-6">
+  <div class="popular-item">
+  <div class="top-content">
+  <div class="icon">
+  <img alt="Fabrikasi Gondola" src="assets/images/icon-01.png"/>
+  </div>
+  <div class="right">
+  <h4>Fabrikasi Gondola</h4>
+  <span><em>100+</em> Proyek Sukses</span>
+  </div>
+  </div>
+  <div class="thumb">
+  <img alt="Fabrikasi Gondola" src="assets/images/popular-01.png"/>
+  <span class="category">Desain Kustom &amp; Presisi</span>
+  <span class="likes"><i class="fa fa-heart"></i> 320</span>
+  </div>
+  <div class="border-button">
+  <a href="contest-details.html">Detail Layanan</a>
+  </div>
+  </div>
+  </div>
+  <div class="col-lg-3 col-md-6">
+  <div class="popular-item">
+  <div class="top-content">
+  <div class="icon">
+  <img alt="Modifikasi Gondola" src="assets/images/icon-02.png"/>
+  </div>
+  <div class="right">
+  <h4>Modifikasi Gondola</h4>
+  <span><em>200+</em> Unit Termodifikasi</span>
+  </div>
+  </div>
+  <div class="thumb">
+  <img alt="Modifikasi Gondola" src="assets/images/popular-02.png"/>
+  <span class="category">Upgrade Sistem &amp; Kapasitas</span>
+  <span class="likes"><i class="fa fa-heart"></i> 410</span>
+  </div>
+  <div class="border-button">
+  <a href="contest-details.html">Detail Layanan</a>
+  </div>
+  </div>
+  </div>
+  <div class="col-lg-3 col-md-6">
+  <div class="popular-item">
+  <div class="top-content">
+  <div class="icon">
+  <img alt="Maintenance &amp; Service" src="assets/images/icon-03.png"/>
+  </div>
+  <div class="right">
+  <h4>Maintenance &amp; Service</h4>
+  <span><em>Perawatan Berkala</em></span>
+  </div>
+  </div>
+  <div class="thumb">
+  <img alt="Maintenance &amp; Service" src="assets/images/popular-03.png"/>
+  <span class="category">Inspeksi &amp; Perbaikan</span>
+  <span class="likes"><i class="fa fa-heart"></i> 275</span>
+  </div>
+  <div class="border-button">
+  <a href="contest-details.html">Detail Layanan</a>
+  </div>
+  </div>
+  </div>
+  <div class="col-lg-3 col-md-6">
+  <div class="popular-item">
+  <div class="top-content">
+  <div class="icon">
+  <img alt="Sparepart Gondola" src="assets/images/icon-04.png"/>
+  </div>
+  <div class="right">
+  <h4>Sparepart Gondola</h4>
+  <span><em>Original &amp; OEM</em></span>
+  </div>
+  </div>
+  <div class="thumb">
+  <img alt="Sparepart Gondola" src="assets/images/popular-04.png"/>
+  <span class="category">Ketersediaan Cepat</span>
+  <span class="Sukses"><i class="."></i></span>
+  </div>
+  <div class="border-button">
+  <a href="contest-details.html">Detail Layanan</a>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </section>
+  <section class="closed-contests section-padding">
+  <div class="container">
+  <div class="row">
+  <div class="col-lg-12">
+  <div class="section-title center">
+  <h6>Portofolio Proyek</h6>
+  <h2><span class="text-primary">Proyek Terkini</span> Kami</h2>
+  </div>
+  </div>
+  <div class="col-lg-12">
+  <div class="owl-features owl-carousel">
+  <div class="item">
+  <div class="closed-item">
+  <div class="thumb">
+  <img alt="Gedung 30 Lantai Jakarta" src="assets/images/closed-01.jpg"/>
+  <span class="winner"><em>Klien:</em> PT. Bangun Jaya</span>
+  <span class="price"><em>Layanan:</em> Fabrikasi Gondola Baru</span>
+  </div>
+  <div class="down-content">
+  <div class="row">
+  <div class="col-7">
+  <h4>Gedung 30 Lantai <br/><span>Jakarta</span></h4>
+  </div>
+  <div class="col-5">
+  <h4 class="pics">Selesai <br/><span>2024</span></h4>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  <div class="item">
+  <div class="closed-item">
+  <div class="thumb">
+  <img alt="Gedung 20 Lantai Surabaya" src="assets/images/closed-02.jpg"/>
+  <span class="winner"><em>Klien:</em> Apartemen Mewah</span>
+  <span class="price"><em>Layanan:</em> Modifikasi Sistem Gondola</span>
+  </div>
+  <div class="down-content">
+  <div class="row">
+  <div class="col-7">
+  <h4>Gedung 20 Lantai <br/><span>Surabaya</span></h4>
+  </div>
+  <div class="col-5">
+  <h4 class="pics">Selesai <br/><span>2023</span></h4>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  <div class="item">
+  <div class="closed-item">
+  <div class="thumb">
+  <img alt="Gedung 15 Lantai Bandung" src="assets/images/closed-03.jpg"/>
+  <span class="winner"><em>Klien:</em> Gedung Perkantoran</span>
+  <span class="price"><em>Layanan:</em> Maintenance &amp; Service</span>
+  </div>
+  <div class="down-content">
+  <div class="row">
+  <div class="col-7">
+  <h4>Gedung 15 Lantai <br/><span>Bandung</span></h4>
+  </div>
+  <div class="col-5">
+  <h4 class="pics">Selesai <br/><span>2022</span></h4>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  <div class="col-lg-12">
+  <div class="border-button text-center">
+  <a href="contests.html">Lihat Proyek Lainnya</a>
+  </div>
+  </div>
+  </div>
+  </div>
+  </section>
 <!-- TRANSISI LAYANAN KE PORTOFOLIO -->
 <div style="height: 36px; margin-top: -36px; background: linear-gradient(180deg, #eaf6fa 0%, #fff 100%);"></div>
 <section class="featured-items section-padding" id="featured-items-combined">
@@ -1160,187 +1431,6 @@ $(document).ready(function(){
   });
 });
 </script>
-<section class="popular-categories section-padding">
-<div class="container">
-<div class="row">
-<div class="col-lg-6">
-<div class="section-title">
-<h6>Layanan Kami</h6>
-<h2>Solusi <span class="text-primary">Terintegrasi</span></h2>
-</div>
-</div>
-<div class="col-lg-6">
-<div class="main-button">
-<a href="kosong.html">Lihat Semua Layanan</a>
-</div>
-</div>
-</div>
-<div class="row">
-<div class="col-lg-3 col-md-6">
-<div class="popular-item">
-<div class="top-content">
-<div class="icon">
-<img alt="Fabrikasi Gondola" src="assets/images/icon-01.png"/>
-</div>
-<div class="right">
-<h4>Fabrikasi Gondola</h4>
-<span><em>100+</em> Proyek Sukses</span>
-</div>
-</div>
-<div class="thumb">
-<img alt="Fabrikasi Gondola" src="assets/images/popular-01.png"/>
-<span class="category">Desain Kustom &amp; Presisi</span>
-<span class="likes"><i class="fa fa-heart"></i> 320</span>
-</div>
-<div class="border-button">
-<a href="contest-details.html">Detail Layanan</a>
-</div>
-</div>
-</div>
-<div class="col-lg-3 col-md-6">
-<div class="popular-item">
-<div class="top-content">
-<div class="icon">
-<img alt="Modifikasi Gondola" src="assets/images/icon-02.png"/>
-</div>
-<div class="right">
-<h4>Modifikasi Gondola</h4>
-<span><em>200+</em> Unit Termodifikasi</span>
-</div>
-</div>
-<div class="thumb">
-<img alt="Modifikasi Gondola" src="assets/images/popular-02.png"/>
-<span class="category">Upgrade Sistem &amp; Kapasitas</span>
-<span class="likes"><i class="fa fa-heart"></i> 410</span>
-</div>
-<div class="border-button">
-<a href="contest-details.html">Detail Layanan</a>
-</div>
-</div>
-</div>
-<div class="col-lg-3 col-md-6">
-<div class="popular-item">
-<div class="top-content">
-<div class="icon">
-<img alt="Maintenance &amp; Service" src="assets/images/icon-03.png"/>
-</div>
-<div class="right">
-<h4>Maintenance &amp; Service</h4>
-<span><em>Perawatan Berkala</em></span>
-</div>
-</div>
-<div class="thumb">
-<img alt="Maintenance &amp; Service" src="assets/images/popular-03.png"/>
-<span class="category">Inspeksi &amp; Perbaikan</span>
-<span class="likes"><i class="fa fa-heart"></i> 275</span>
-</div>
-<div class="border-button">
-<a href="contest-details.html">Detail Layanan</a>
-</div>
-</div>
-</div>
-<div class="col-lg-3 col-md-6">
-<div class="popular-item">
-<div class="top-content">
-<div class="icon">
-<img alt="Sparepart Gondola" src="assets/images/icon-04.png"/>
-</div>
-<div class="right">
-<h4>Sparepart Gondola</h4>
-<span><em>Original &amp; OEM</em></span>
-</div>
-</div>
-<div class="thumb">
-<img alt="Sparepart Gondola" src="assets/images/popular-04.png"/>
-<span class="category">Ketersediaan Cepat</span>
-<span class="Sukses"><i class="."></i></span>
-</div>
-<div class="border-button">
-<a href="contest-details.html">Detail Layanan</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section class="closed-contests section-padding">
-<div class="container">
-<div class="row">
-<div class="col-lg-12">
-<div class="section-title center">
-<h6>Portofolio Proyek</h6>
-<h2><span class="text-primary">Proyek Terkini</span> Kami</h2>
-</div>
-</div>
-<div class="col-lg-12">
-<div class="owl-features owl-carousel">
-<div class="item">
-<div class="closed-item">
-<div class="thumb">
-<img alt="Gedung 30 Lantai Jakarta" src="assets/images/closed-01.jpg"/>
-<span class="winner"><em>Klien:</em> PT. Bangun Jaya</span>
-<span class="price"><em>Layanan:</em> Fabrikasi Gondola Baru</span>
-</div>
-<div class="down-content">
-<div class="row">
-<div class="col-7">
-<h4>Gedung 30 Lantai <br/><span>Jakarta</span></h4>
-</div>
-<div class="col-5">
-<h4 class="pics">Selesai <br/><span>2024</span></h4>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="item">
-<div class="closed-item">
-<div class="thumb">
-<img alt="Gedung 20 Lantai Surabaya" src="assets/images/closed-02.jpg"/>
-<span class="winner"><em>Klien:</em> Apartemen Mewah</span>
-<span class="price"><em>Layanan:</em> Modifikasi Sistem Gondola</span>
-</div>
-<div class="down-content">
-<div class="row">
-<div class="col-7">
-<h4>Gedung 20 Lantai <br/><span>Surabaya</span></h4>
-</div>
-<div class="col-5">
-<h4 class="pics">Selesai <br/><span>2023</span></h4>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="item">
-<div class="closed-item">
-<div class="thumb">
-<img alt="Gedung 15 Lantai Bandung" src="assets/images/closed-03.jpg"/>
-<span class="winner"><em>Klien:</em> Gedung Perkantoran</span>
-<span class="price"><em>Layanan:</em> Maintenance &amp; Service</span>
-</div>
-<div class="down-content">
-<div class="row">
-<div class="col-7">
-<h4>Gedung 15 Lantai <br/><span>Bandung</span></h4>
-</div>
-<div class="col-5">
-<h4 class="pics">Selesai <br/><span>2022</span></h4>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="col-lg-12">
-<div class="border-button text-center">
-<a href="contests.html">Lihat Proyek Lainnya</a>
-</div>
-</div>
-</div>
-</div>
-</section>
 <section class="pricing-plans section-padding">
 <div class="container">
 <div class="row">
